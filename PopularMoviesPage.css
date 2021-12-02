@@ -1,0 +1,2352 @@
+/* Main Popular Movie Picture */
+
+#main_popular_movie_picture{
+  position: absolute;
+  width: 1660px;
+  height: 655px;
+  left: 0px;
+  top: 80px;
+}
+/* nomandland Title */
+
+#nomandlandTitle{
+  position: absolute;
+  max-width: 99%;
+  max-height: 99%;
+  left: 31px;
+  top: 500px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  display: flex;
+  align-items: center;
+
+  color: #FFFCFC;
+}
+
+#nomandlandTitle1{
+position: absolute;
+width: 808px;
+height: 179px;
+left: 31px;
+top: 540px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #FFFCFC;
+}
+/* Main > Popular Movies */
+
+#text{
+position: absolute;
+width: 575px;
+height: 34px;
+left: 59px;
+top: 761px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+
+color: #000000;
+}
+
+
+
+
+
+/* Popular Movies */
+popular_movie_title {
+  position: relative;
+  width: 1440px;
+  height: 3729px;
+  background: #FFFFFF;
+  }
+
+/* Main Popular Movie Cover Picture */
+cover {
+position: absolute;
+width: 1440px;
+height: 655px;
+left: 0px;
+top: 80px;
+
+background: url(https://replit.com/@SoreaAsmai/automationfilms-3#Pictures/Popular%20Movie%20Cover.jpeg);
+}
+
+/* Search Bar Position */
+search_bar_position {
+position: absolute;
+width: 786px;
+height: 40px;
+left: 327px;
+top: 802px;
+}
+
+
+/* Search Bar Appearance */
+search_bar_appearance {
+position: absolute;
+left: 327px;
+right: 327px;
+top: 802px;
+bottom: 2887px;
+}
+
+
+/* form-control input-style-1 */
+position: absolute;
+left: 0px;
+right: 212px;
+top: 0px;
+bottom: 0px;
+
+background: #F9F9F9;
+border: 1px solid #E6E6E6;
+box-sizing: border-box;
+border-radius: 5px 0px 0px 5px;
+
+
+/* Search */
+
+position: absolute;
+width: 50px;
+height: 28px;
+left: 26px;
+top: calc(50% - 28px/2);
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+letter-spacing: 0.2px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* input-group-append */
+
+position: absolute;
+width: 155px;
+right: 59px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* dropdown */
+
+position: absolute;
+width: 155px;
+height: 40px;
+left: 0px;
+top: 0px;
+
+
+
+/* dropdown-toggle */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #F9F9F9;
+border: 1px solid #E6E6E6;
+box-sizing: border-box;
+
+
+/* Category */
+
+position: absolute;
+width: 67px;
+height: 28px;
+left: 23px;
+top: calc(50% - 28px/2);
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+letter-spacing: 0.2px;
+
+/* text-color */
+color: #252B42;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 5.71px;
+height: 10px;
+right: 20.29px;
+top: calc(50% - 10px/2 + 2px);
+
+/* text-color */
+background: #252B42;
+transform: rotate(90deg);
+
+
+/* input-group-append */
+
+position: absolute;
+width: 60px;
+right: 1px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* btn  */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #B91C1C;
+border: 1px solid #E6E6E6;
+box-sizing: border-box;
+border-radius: 0px 5px 5px 0px;
+
+
+/* icn search .icn-xs */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 20px;
+top: 19px;
+
+
+
+/* vector */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: calc(50% - 16px/2 - 0px);
+top: calc(50% - 16px/2 - 0px);
+
+/* light-text-color */
+background: #FFFFFF;
+
+
+/* Row 1 Movie List of Size */
+row_one_size {
+position: absolute;
+width: 1245px;
+height: 2518px;
+left: 98px;
+top: 871px;
+}
+
+
+
+/* Row 1 (Best Pictures) */
+row_one {
+position: absolute;
+width: 1244px;
+height: 604px;
+left: 98px;
+top: 2785px;
+}
+
+
+/* Title */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 1244px;
+height: 47px;
+left: 98px;
+top: 2785px;
+
+
+
+/* Adapted Screenplay */
+
+position: static;
+width: 357px;
+height: 47px;
+left: 0px;
+top: 0px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 47px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 83px;
+
+
+/* See more */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 107px;
+height: 24px;
+left: 1137px;
+top: 11.5px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 83px;
+
+
+/* See more */
+
+position: static;
+width: 79px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+/* rose/700 */
+color: #BE123C;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+
+
+/* Chevron right */
+
+position: static;
+width: 20px;
+height: 20px;
+left: 87px;
+top: 2px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+
+
+/* Icon */
+
+position: absolute;
+left: 37.5%;
+right: 4.17%;
+top: 79.17%;
+bottom: -8.33%;
+
+/* red/700 */
+border: 2px solid #B91C1C;
+transform: rotate(-90deg);
+
+
+/* Movie List */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 1240px;
+height: 513px;
+left: 98px;
+top: 2876px;
+
+
+
+
+
+
+
+/* Title */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 1244px;
+height: 47px;
+left: 99px;
+top: 871px;
+
+
+
+/* Best Picture */
+
+position: static;
+width: 212px;
+height: 47px;
+left: 0px;
+top: 0px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 47px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 83px;
+
+
+/* See more */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 107px;
+height: 24px;
+left: 1137px;
+top: 11.5px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 83px;
+
+
+/* See more */
+
+position: static;
+width: 79px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+/* rose/700 */
+color: #BE123C;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+
+
+/* Chevron right */
+
+position: static;
+width: 20px;
+height: 20px;
+left: 87px;
+top: 2px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+
+
+/* Icon */
+
+position: absolute;
+left: 37.5%;
+right: 4.17%;
+top: 79.17%;
+bottom: -8.33%;
+
+/* red/700 */
+border: 2px solid #B91C1C;
+transform: rotate(-90deg);
+
+
+/* Movie List */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 1240px;
+height: 513px;
+left: 99px;
+top: 962px;
+
+
+
+/* Movie Card */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 490px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 80px;
+
+
+/* Poster */
+
+position: static;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Poster Image */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: #C4C4C4;
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: url(.jpg), url(.jpg);
+
+
+/* Rating */
+
+position: absolute;
+width: 218px;
+height: 29.21px;
+left: 16px;
+top: 15.58px;
+
+
+
+/* TV Series */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 3px 8px;
+
+position: absolute;
+width: 74px;
+height: 22px;
+left: 0px;
+top: 3.61px;
+
+background: rgba(243, 244, 246, 0.5);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 12px;
+
+
+/* TV SERIES */
+
+position: static;
+width: 58px;
+height: 16px;
+left: 8px;
+top: 3px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Favorite */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+
+
+/* Ellipse 3 */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+background: rgba(243, 244, 246, 0.5);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+
+
+/* Heart */
+
+position: absolute;
+width: 20px;
+height: 19.47px;
+left: 193px;
+top: 4.87px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 10%;
+right: 10%;
+top: 20%;
+bottom: 11.72%;
+
+/* gray/300 */
+background: #D1D5DB;
+
+
+/* USA, 2016 - Current */
+
+position: static;
+width: 114px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Stranger Things */
+
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Rating */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 17px;
+left: 0px;
+top: 445px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* IMDB */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 101px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1 */
+
+position: static;
+width: 35px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 86.0 / 100 */
+
+position: static;
+width: 56px;
+height: 12px;
+left: 45px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Rotten Tomatoes */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 49px;
+height: 17px;
+left: 201px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* PngItem_1381056 1 */
+
+position: static;
+width: 16px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 97% */
+
+position: static;
+width: 23px;
+height: 12px;
+left: 26px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Action, Adventure / Horror */
+
+position: static;
+width: 148px;
+height: 16px;
+left: 0px;
+top: 474px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Movie Card */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 490px;
+left: 330px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 80px;
+
+
+/* Poster */
+
+position: static;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Poster Image */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: #C4C4C4;
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: url(.jpg);
+
+
+/* Rating */
+
+position: absolute;
+width: 218px;
+height: 29.21px;
+left: 16px;
+top: 15.58px;
+
+
+
+/* TV Series */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 3px 8px;
+
+position: absolute;
+visibility: hidden;
+width: 74px;
+height: 22px;
+left: 0px;
+top: 3.61px;
+
+background: rgba(243, 244, 246, 0.5);
+border-radius: 12px;
+
+
+/* Favorite */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+
+
+/* Ellipse 3 */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+background: rgba(243, 244, 246, 0.5);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+
+
+/* Heart */
+
+position: absolute;
+width: 20px;
+height: 19.47px;
+left: 193px;
+top: 4.87px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 10%;
+right: 10%;
+top: 20%;
+bottom: 11.72%;
+
+/* gray/300 */
+background: #D1D5DB;
+
+
+/* USA, 2016 - Current */
+
+position: static;
+width: 61px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Stranger Things */
+
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Rating */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 17px;
+left: 0px;
+top: 445px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* IMDB */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 101px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1 */
+
+position: static;
+width: 35px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 86.0 / 100 */
+
+position: static;
+width: 56px;
+height: 12px;
+left: 45px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Rotten Tomatoes */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 50px;
+height: 17px;
+left: 200px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* PngItem_1381056 1 */
+
+position: static;
+width: 16px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 97% */
+
+position: static;
+width: 24px;
+height: 12px;
+left: 26px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Action, Adventure / Horror */
+
+position: static;
+width: 105px;
+height: 16px;
+left: 0px;
+top: 474px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Movie Card */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 513px;
+left: 660px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 80px;
+
+
+/* Poster */
+
+position: static;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Poster Image */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: #C4C4C4;
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: url(.jpg);
+
+
+/* Rating */
+
+position: absolute;
+width: 218px;
+height: 29.21px;
+left: 16px;
+top: 15.58px;
+
+
+
+/* TV Series */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 3px 8px;
+
+position: absolute;
+visibility: hidden;
+width: 74px;
+height: 22px;
+left: 0px;
+top: 3.61px;
+
+background: rgba(243, 244, 246, 0.5);
+border-radius: 12px;
+
+
+/* Favorite */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+
+
+/* Ellipse 3 */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+background: rgba(243, 244, 246, 0.5);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+
+
+/* Heart */
+
+position: absolute;
+width: 20px;
+height: 19.47px;
+left: 193px;
+top: 4.87px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 10%;
+right: 10%;
+top: 20%;
+bottom: 11.72%;
+
+/* gray/300 */
+background: #D1D5DB;
+
+
+/* USA, 2016 - Current */
+
+position: static;
+width: 57px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Stranger Things */
+
+position: static;
+width: 250px;
+height: 46px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Rating */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 17px;
+left: 0px;
+top: 468px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* IMDB */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 102px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1 */
+
+position: static;
+width: 35px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 86.0 / 100 */
+
+position: static;
+width: 57px;
+height: 12px;
+left: 45px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Rotten Tomatoes */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 49px;
+height: 17px;
+left: 201px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* PngItem_1381056 1 */
+
+position: static;
+width: 16px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 97% */
+
+position: static;
+width: 23px;
+height: 12px;
+left: 26px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Action, Adventure / Horror */
+
+position: static;
+width: 171px;
+height: 16px;
+left: 0px;
+top: 497px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Movie Card */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 490px;
+left: 990px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 0px 80px;
+
+
+/* Poster */
+
+position: static;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Poster Image */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: #C4C4C4;
+
+
+/* Poster */
+
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: url(.jpg);
+
+
+/* Rating */
+
+position: absolute;
+width: 218px;
+height: 29.21px;
+left: 16px;
+top: 15.58px;
+
+
+
+/* TV Series */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 3px 8px;
+
+position: absolute;
+visibility: hidden;
+width: 74px;
+height: 22px;
+left: 0px;
+top: 3.61px;
+
+background: rgba(243, 244, 246, 0.5);
+border-radius: 12px;
+
+
+/* Favorite */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+
+
+/* Ellipse 3 */
+
+position: absolute;
+width: 30px;
+height: 29.21px;
+left: 188px;
+top: 0px;
+
+background: rgba(243, 244, 246, 0.5);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+
+
+/* Heart */
+
+position: absolute;
+width: 20px;
+height: 19.47px;
+left: 193px;
+top: 4.87px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 10%;
+right: 10%;
+top: 20%;
+bottom: 11.72%;
+
+/* gray/300 */
+background: #D1D5DB;
+
+
+/* USA, 2016 - Current */
+
+position: static;
+width: 56px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Stranger Things */
+
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Rating */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 250px;
+height: 17px;
+left: 0px;
+top: 445px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* IMDB */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 101px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1 */
+
+position: static;
+width: 35px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 86.0 / 100 */
+
+position: static;
+width: 56px;
+height: 12px;
+left: 45px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Rotten Tomatoes */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 51px;
+height: 17px;
+left: 199px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* PngItem_1381056 1 */
+
+position: static;
+width: 16px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* 97% */
+
+position: static;
+width: 25px;
+height: 12px;
+left: 26px;
+top: 2.5px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Action, Adventure / Horror */
+
+position: static;
+width: 130px;
+height: 16px;
+left: 0px;
+top: 474px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+margin: 12px 0px;
+
+
+/* Main > Popular Movies */
+
+position: absolute;
+width: 575px;
+height: 34px;
+left: 59px;
+top: 761px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+
+color: #000000;
+
+
+
+/* nomandland Title */
+nomandland_title {
+position: absolute;
+width: 808px;
+height: 179px;
+left: 31px;
+top: 535px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 75px;
+display: flex;
+align-items: center;
+
+color: red;
+
+}
+
+/* Menu Bar */
+
+position: absolute;
+width: 1440px;
+height: 81px;
+left: 0px;
+top: 0px;
+
+
+
+/* Rectangle 26 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #111827;
+
+
+/* Frame 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 1.23%;
+
+
+
+/* Navbar */
+
+position: absolute;
+width: 1440px;
+height: 80px;
+left: 0px;
+top: 0px;
+
+
+
+/* BG */
+
+position: absolute;
+width: 1440px;
+height: 80px;
+left: 0px;
+top: 0px;
+
+
+
+/* Search */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 6px 10px;
+
+position: absolute;
+width: 525px;
+height: 36px;
+left: 493px;
+top: 22px;
+
+/* gray/300 */
+border: 2px solid #D1D5DB;
+border-radius: 6px;
+
+
+/* What do you want to watch? */
+
+position: static;
+width: 211px;
+height: 24px;
+left: 10px;
+top: 6px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+/* white */
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Search */
+
+position: static;
+width: 16px;
+height: 16px;
+left: 499px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Icon */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* white */
+border: 2px solid #FFFFFF;
+
+
+/* Menu */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 36px;
+height: 36px;
+left: 1229px;
+top: 20px;
+
+
+
+/* Logo */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 278px;
+height: 50px;
+left: 40px;
+top: 15px;
+
+
+
+/* tv */
+
+position: static;
+width: 50px;
+height: 50px;
+left: 0px;
+top: 0px;
+
+background: url(.png);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 24px;
+
+
+/* MovieBox */
+
+position: static;
+width: 204px;
+height: 24px;
+left: 74px;
+top: 13px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 24px;
+
+
+/* Menu */
+
+position: absolute;
+width: 36px;
+height: 36px;
+left: 1357px;
+top: 20px;
+
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 36px;
+height: 36px;
+left: 1357px;
+top: 20px;
+
+/* rose/700 */
+background: #BE123C;
+
+
+/* Menu alt 4 */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 1363px;
+top: 26px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 15%;
+right: 15%;
+top: 30%;
+bottom: 30%;
+
+/* white */
+background: #FFFFFF;
