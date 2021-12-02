@@ -6,6 +6,7 @@
   height: 655px;
   left: 0px;
   top: 80px;
+  margin: 0%;
 }
 /* nomandland Title */
 
@@ -51,21 +52,17 @@ color: #FFFCFC;
 position: absolute;
 width: 575px;
 height: 34px;
-left: 59px;
-top: 761px;
+left: 10px;
+top: 700px;
 
-font-family: DM Sans;
+font-family: 'Courier New';
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
-line-height: 23px;
+line-height: 28px;
 
 color: #000000;
 }
-
-
-
-
 
 /* Popular Movies */
 popular_movie_title {

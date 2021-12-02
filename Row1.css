@@ -1,4 +1,4 @@
-
+  
 /* Whole Row 1 */
 #wholeRow1 {
 position: absolute;
@@ -26,106 +26,49 @@ left: 98px;
 top: 879px;
 }
 
-
-
   
-/* Category */
-#category {
+/* Category - best picture */
+#category{
   
 position: static;
-width: 79px;
-height: 47px;
-left: 582.5px;
+width: 250px;
+height: 20px;
+left: 0px;
 top: 0px;
 
-font-family: DM Sans;
+font-family: 'Courier New';
 font-style: normal;
 font-weight: bold;
-font-size: 36px;
+font-size: 30px;
 line-height: 47px;
 /* identical to box height */
 
 color: #000000;
 }
 
-
-/* Row 1 of Movie List */
-
-/* Spacing between movie*/ 
-#space1 {
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-position: absolute;
-width: 1240px;
-height: 456px;
-left: 98px;
-top: 970px;
+.column {
+  float: left;
+  width: 18%;
+  padding: 10px;
 }
 
-
-
-/* Poster Image */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-
-/* Poster Image */
-
-#poster4 {
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
+.row: after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Movie Card 4 */
-movie_card4{
-/* Auto Layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-width: 250px;
-height: 433px;
-left: 900px;
-top: 0px;
-}
-
-/* Inside Auto Layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 80px;
-
-
-/* Poster 4 - Delete */
+/* Movie (1,1)----------------------------------------- */
+/* Movie Size 1 */
+#movieSize1 {
 
 position: static;
 width: 250px;
 height: 370px;
-left: 0px;
+left: 30px;
 top: 0px;
 
+background: url(.jpg);
 
 /* Inside Auto Layout */
 flex: none;
@@ -133,41 +76,10 @@ order: 0;
 flex-grow: 0;
 margin: 12px 0px;
 
-
-/* Poster Image 4 */
-#posterimage4 {
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
 }
 
-
-
-/* Poster */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: #C4C4C4;
-
-
-/* Poster */
-#poster4 {
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: url(.jpg);
-}
-/* Movie 4 Year */
-
+/* Movie 1 Year */
+#movieYear1 {
 position: static;
 width: 56px;
 height: 16px;
@@ -181,16 +93,19 @@ font-size: 12px;
 line-height: 16px;
 /* identical to box height */
 
+/* gray/400 */
+color: #9CA3AF;
 
 /* Inside Auto Layout */
 flex: none;
-order: 1;
+order: 2;
 flex-grow: 0;
 margin: 12px 0px;
 
+}
 
-/* Movie 4 Title */
-
+/* Movie Title 1 */
+#movieTitle1 {
 position: static;
 width: 250px;
 height: 23px;
@@ -206,236 +121,18 @@ line-height: 23px;
 /* gray/900 */
 color: #111827;
 
-
-/* Inside Auto Layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-
-/* Auto Layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-display: none;
-width: 250px;
-height: 17px;
-left: 0px;
-top: 445px;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-margin: 12px 0px;
-
-/* Inside Auto Layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-/* Movie Card 3 */
-#moviecard3 {
-/* Auto Layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-width: 250px;
-height: 456px;
-left: 330px;
-top: 0px;
-}
-
-#movecard3_position {
-/* Inside Auto Layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 80px;
-}
-
-
-
-/* Poster 3  - Delete */
-
-position: static;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-/* Poster Image 3 */
-#posterimage3 {
-position: absolute;
-width: 250px;
-height: 370px;
-left: px;
-top: 0px;
-}
-
-
-
-/* Poster */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: #C4C4C4;
-
-
-/* Poster */
-#poster3 {
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: url(.jpg);
-}
-
-
-
-
-
-/* Movie 3 Year */
-#movie3year {
-position: static;
-width: 57px;
-height: 16px;
-left: 0px;
-top: 382px;
-
-font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
-
-
 /* Inside Auto Layout */
 flex: none;
 order: 1;
 flex-grow: 0;
 margin: 12px 0px;
-
 }
+/* End of Movie (1,1)----------------------------------- */
 
 
-/* Movie 3 Title */
-#movie3title {
-position: static;
-width: 250px;
-height: 46px;
-left: 0px;
-top: 410px;
-
-font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-
-/* gray/900 */
-color: #111827;
-
-}
-
-/* Inside Auto Layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-
-
-
-/* Movie Card 2 */
-
-/* Auto Layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-width: 250px;
-height: 433px;
-left: 660px;
-top: 0px;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-margin: 0px 80px;
-
-
-/* Poster 2 - Delete */
-
-position: static;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-/* Poster Image 2 */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-
-
-/* Poster */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: #C4C4C4;
-
-
-/* Poster */
-
+/* Movie (1,2)------------------------------------------ */
+/* Movie Size 2 */
+#movieSize2 {
 position: absolute;
 width: 250px;
 height: 370px;
@@ -445,88 +142,21 @@ top: 0px;
 background: url(.jpg);
 
 
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
 
 /* Movie 2 Year */
-
+#movieYear2 {
 position: static;
-width: 61px;
+width: 56px;
 height: 16px;
 left: 0px;
 top: 382px;
-
-font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
- 
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-/* Movie 2 Title */
-
-position: static;
-width: 250px;
-height: 23px;
-left: 0px;
-top: 410px;
-
-font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-
-/* gray/900 */
-color: #111827;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-/* Rating */
-
-/* Auto Layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-display: none;
-width: 250px;
-height: 17px;
-left: 0px;
-top: 445px;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-margin: 12px 0px;
-
-
-/* Action, Adventure / Horror */
-
-position: static;
-display: none;
-width: 105px;
-height: 16px;
-left: 0px;
-top: 474px;
 
 font-family: DM Sans;
 font-style: normal;
@@ -538,46 +168,50 @@ line-height: 16px;
 /* gray/400 */
 color: #9CA3AF;
 
-
 /* Inside Auto Layout */
 flex: none;
-order: 4;
+order: 2;
 flex-grow: 0;
 margin: 12px 0px;
 
+}
 
-/* Movie Card 4 */
-
-.moviecard4{
-/* Auto Layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
+/* Movie Title 2 */
+#movieTitle2 {
 position: static;
 width: 250px;
-height: 433px;
-left: 990px;
-top: 0px;
+height: 23px;
+left: -200px;
+top: 410px;
 
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
 
 /* Inside Auto Layout */
 flex: none;
-order: 3;
+order: 1;
 flex-grow: 0;
-margin: 0px 80px;
-
+margin: 12px 0px;
 }
+/* End of Movie (1,2)----------------------------------- */
 
 
-/* Poster 1 - Delete */
-
-position: static;
+/* Movie (1,3)------------------------------------------ */
+/* Movie Size 3 */
+#movieSize3 {
+position: absolute;
 width: 250px;
 height: 370px;
 left: 0px;
 top: 0px;
+
+background: url(.jpg);
 
 
 /* Inside Auto Layout */
@@ -586,43 +220,12 @@ order: 0;
 flex-grow: 0;
 margin: 12px 0px;
 
+}
 
-/* Poster Image 1 */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-
-
-/* Poster */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: #C4C4C4;
-
-
-/* Poster */
-
-position: absolute;
-width: 250px;
-height: 370px;
-left: 0px;
-top: 0px;
-
-background: url(.jpg), url(.jpg);
-
-
-/* Movie 1 Year */
-
+/* Movie 3 Year */
+#movieYear3 {
 position: static;
-width: 114px;
+width: 56px;
 height: 16px;
 left: 0px;
 top: 382px;
@@ -634,22 +237,23 @@ font-size: 12px;
 line-height: 16px;
 /* identical to box height */
 
-
-
+/* gray/400 */
+color: #9CA3AF;
 
 /* Inside Auto Layout */
 flex: none;
-order: 1;
+order: 2;
 flex-grow: 0;
 margin: 12px 0px;
 
+}
 
-/* Movie 1 Title */
-
+/* Movie Title 3 */
+#movieTitle3 {
 position: static;
 width: 250px;
 height: 23px;
-left: 0px;
+left: -200px;
 top: 410px;
 
 font-family: DM Sans;
@@ -661,46 +265,41 @@ line-height: 23px;
 /* gray/900 */
 color: #111827;
 
-
 /* Inside Auto Layout */
 flex: none;
-order: 2;
+order: 1;
 flex-grow: 0;
 margin: 12px 0px;
+}
+/* End of Movie (1,3)----------------------------------- */
 
-
-/* Rating */
-
-/* Auto Layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-display: none;
+/* Movie (1,4)------------------------------------------ */
+/* Movie Size 4 */
+#movieSize4 {
+position: absolute;
 width: 250px;
-height: 17px;
+height: 370px;
 left: 0px;
-top: 445px;
+top: 0px;
+
+background: url(.jpg);
 
 
 /* Inside Auto Layout */
 flex: none;
-order: 3;
+order: 0;
 flex-grow: 0;
 margin: 12px 0px;
 
+}
 
-/* Action, Adventure / Horror */
-
+/* Movie 4 Year */
+#movieYear4 {
 position: static;
-display: none;
-width: 148px;
+width: 56px;
 height: 16px;
 left: 0px;
-top: 474px;
+top: 382px;
 
 font-family: DM Sans;
 font-style: normal;
@@ -712,9 +311,106 @@ line-height: 16px;
 /* gray/400 */
 color: #9CA3AF;
 
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
+
+/* Movie Title 4 */
+#movieTitle4 {
+position: static;
+width: 250px;
+height: 23px;
+left: -200px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
 
 /* Inside Auto Layout */
 flex: none;
-order: 4;
+order: 1;
 flex-grow: 0;
 margin: 12px 0px;
+}
+/* End of Movie (1,4)----------------------------------- */
+
+/* Movie (1,5)------------------------------------------ */
+/* Movie Size 5 */
+#movieSize5 {
+position: absolute;
+width: 250px;
+height: 370px;
+left: 0px;
+top: 0px;
+
+background: url(.jpg);
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
+
+/* Movie 5 Year */
+#movieYear5 {
+position: static;
+width: 56px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
+
+/* Movie Title 5 */
+#movieTitle5 {
+position: static;
+width: 250px;
+height: 23px;
+left: -200px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+}
+/* End of Movie (1,5)----------------------------------- */

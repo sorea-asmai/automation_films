@@ -1,8 +1,12 @@
 /* Styles the top Nav. bar*/
 .topnav {
+  padding-top: 0px;
+  margin-top: 0px;
   background-color: black;
-  width: auto;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  margin: 0%;
 }
 
 /* Style the links inside the navigation bar */
@@ -10,9 +14,9 @@
   float: left;
   color: white;
   text-align: left;
-  padding: 14px 16px;
+  padding: 10px 10px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 /* Change the color of links on hover */
@@ -23,19 +27,21 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: BLACK;
+  background-color: black;
   color: white;
 }
+
 /*Changes the inside of the search bar*/
-.topnav input[type=text]{
+
+.topnav input[type=search]{
   float: c;
   text-align: center;
-  padding: 10px;
-  width: 30%;
+  padding: 8px;
+  width: 50%;
   border: ridge;
   border-color: white;
   background: #E5E5E5;
-  margin-top: 10px;
-  font-size: 15px;
+  margin-top: 6px;
+  font-size: 18px;
   color: black;
 }
