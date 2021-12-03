@@ -1,3 +1,21 @@
+/*Automation Films Title*/
+.title {
+  padding: 100px;
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 30px;
+
+  color: white;
+}
+
+/* Let's Get Started Link*/
+.started {
+  position: 25% 75%;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+}
 /* Home Page */
 
 position: relative;
@@ -14,6 +32,8 @@ width: 2374px;
 height: 1558px;
 left: -451px;
 top: 81px;
+
+
 
 
 
@@ -314,22 +334,4 @@ bottom: 30%;
 background: #FFFFFF;
 
 
-/* Automation Films */
-
-position: absolute;
-width: 906px;
-height: 258px;
-left: 285px;
-top: 293px;
-
-font-family: Just Another Hand;
-font-style: normal;
-font-weight: normal;
-font-size: 200px;
-line-height: 200px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #F9F9F9;
 
