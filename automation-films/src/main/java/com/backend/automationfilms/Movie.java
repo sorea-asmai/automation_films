@@ -6,7 +6,6 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,7 +13,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity  // Makes a table for this class
 @Table(name = "movie")
@@ -36,19 +39,9 @@ public class Movie {
     private Integer year;
 
     // Movie poster
-    private String poster; // dont know yet
+    private String poster;
 
-    private String imbdLink; // ?? not sure what this is for (Was in dbDiagram)
-
-    // Many to one relationship as one actor can star in many movies
-    @ManyToOne
-    @JoinColumn(name = "actor_id", nullable = false)
-    private Actor actor;
-
-    // Many to one relationship as one director can direct multipule movies
-    @ManyToOne
-    @JoinColumn(name = "director_id", nullable = false)
-    private Director director;
+    private String imbdLink;
 
     // Many to many relationship as multiple movies can fit into many different genres
     @ManyToMany(cascade = {CascadeType.ALL})
@@ -59,19 +52,12 @@ public class Movie {
         inverseJoinColumns = {
             @JoinColumn(name = "genre_id", referencedColumnName = "id",
                 nullable = false, updatable = false)})
+    @JsonManagedReference
     private Set<Genre> genre = new HashSet<>();
 
-    // Many to many relationship as multiple movies can be nominated for many
-    // different award catagories
-    @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name = "movie_award",
-        joinColumns = {
-            @JoinColumn(name = "movie_id", referencedColumnName = "id",
-                nullable = false, updatable = false)},
-        inverseJoinColumns = {
-            @JoinColumn(name = "award_id", referencedColumnName = "id",
-                nullable = false, updatable = false)})
-    private Set<Award> award = new HashSet<>();
+    @OneToMany(mappedBy = "movie")
+    @JsonBackReference
+    Set<Nominated> nomination;
 
     // Basic setter and getter methods
     // Can be changed or deleted based on need
@@ -123,22 +109,6 @@ public class Movie {
         this.imbdLink = imbdString;
     }
 
-    public Actor getActor() {
-        return actor;
-    }
-
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    }
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public void setDirector(Director director) {
-        this.director = director;
-    }
-
     public Set<Genre> getGenre() {
         return genre;
     }
@@ -147,11 +117,18 @@ public class Movie {
         this.genre = genre;
     }
 
-    public Set<Award> getAward() {
-        return award;
-    }
-
-    public void setAward(Set<Award> award) {
-        this.award = award;
+    public String toString() {
+        String result = "";
+        result = result + getId() + "\n";
+        result = result + getName() + "\n";
+        result = result + getYear() + "\n";
+        result = result + getDescription() + "\n";
+        result = result + getPoster() + "\n";
+        result = result + getImbdLink() + "\n";
+        for(Genre g : getGenre()) {
+            result = result + g;
+        }
+        result = result + "\n";
+        return result;
     }
  }

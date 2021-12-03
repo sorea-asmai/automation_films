@@ -5,12 +5,14 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity  // Makes a table for this class
 @Table(name = "genre")  // Names the table
@@ -27,6 +29,7 @@ public class Genre {
 
     // Many to many relationship as multiple movies can fit in multiple genres
     @ManyToMany(mappedBy = "genre")
+    @JsonBackReference
     private Set<Movie> movie = new HashSet<>();
 
     // Getter and Setter methods
@@ -53,5 +56,12 @@ public class Genre {
 
     public void setMovie(Set<Movie> movie) {
         this.movie = movie;
+    }
+
+    public String toString() {
+        String result = "";
+        result = result + getId() + "\n";
+        result = result + getName() + "\n";
+        return result;
     }
 }
