@@ -59,7 +59,7 @@ top: 647px;
 
 
 /* Button Background */
-
+.startbutton {
 position: absolute;
 left: 0%;
 right: 0%;
@@ -68,6 +68,7 @@ bottom: 0%;
 
 background: #FFFFFF;
 border-radius: 5px;
+}
 
 
 /* Button Text */

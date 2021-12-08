@@ -1,0 +1,239 @@
+/* Separated Line */
+#line {
+position: absolute;
+width: 1440px;
+height: 0px;
+left: 0px;
+top: 1361px;
+
+border: 1px solid rgba(0, 0, 0, 0.5);
+transform: rotate(0.08deg);
+
+}
+
+/* Breadcrumb */
+#breadcrumb {
+position: absolute;
+width: 575px;
+height: 34px;
+left: 57px;
+top: 129px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+
+color: #000000;
+
+}
+
+/* Movie Title */
+#singleMovie_title {
+position: absolute;
+width: 612px;
+height: 92px;
+left: 777px;
+top: 225px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 75px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+
+
+/* Available Streaming Platforms: */
+#streaming_title {
+position: absolute;
+width: 589px;
+height: 92px;
+left: 814px;
+top: 317px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+}
+
+/* Description */
+#description {
+position: absolute;
+width: 558px;
+height: 296px;
+left: 816px;
+top: 933px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+}
+
+/* Movie Cover */
+#singleMovie_cover {
+position: absolute;
+width: 702px;
+height: 1040px;
+left: 57px;
+top: 211px;
+
+background: url(image.png);
+
+}
+
+/* Nominations: Best Actor, Best Movie, Best Something */
+#nominations {
+position: absolute;
+width: 572px;
+height: 92px;
+left: 818px;
+top: 764px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+}
+
+/* Awarded: Best Singer */
+#awarded {
+position: absolute;
+width: 447.69px;
+height: 92px;
+left: 818px;
+top: 718px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+
+/* Year: 2016 */
+#year {
+position: absolute;
+width: 447.69px;
+height: 92px;
+left: 818px;
+top: 672px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+
+/* Streaming Platform */
+#streaming_plat {
+position: absolute;
+width: 505px;
+height: 252px;
+left: 826px;
+top: 409px;
+
+background: url(image.png);
+}
+
+/* Column */
+.column {
+  float: left;
+  width: 18%;
+  padding: 10px;
+}
+
+/* Row */
+.row: after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Sub Movie Title */
+#subMovieTitle {
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+}
+
+/* Year */
+#subMovieYear {
+position: static;
+width: 114px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+}
