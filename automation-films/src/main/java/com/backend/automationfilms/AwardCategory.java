@@ -1,20 +1,20 @@
 package com.backend.automationfilms;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity  // makes a table out of this class
-@Table(name = "award") // names the table
-public class Award {
+@Table(name = "awardCategory") // names the table
+public class AwardCategory {
 
     // Generates id for table
     @Id
@@ -28,16 +28,9 @@ public class Award {
     // Year of the award
     private Integer year; 
 
-    // Many to many relationship as multiple movies/actors/directors can
-    // be nominated in multiple award catagories
-    @ManyToMany(mappedBy = "award")
-    private Set<Movie> movie = new HashSet<>();
-
-    @ManyToMany(mappedBy = "award")
-    private Set<Actor> actor = new HashSet<>();
-
-    @ManyToMany(mappedBy = "award")
-    private Set<Director> director = new HashSet<>();
+    @OneToMany(mappedBy = "awardCategory")
+    @JsonBackReference
+    Set<Nominated> nomination;
 
     // Getter and setter methods
     // Can be changed or deleted depending on need
@@ -65,27 +58,15 @@ public class Award {
         this.year = year;
     }
 
-    public Set<Movie> getMovie() {
-        return movie;
+    public Set<Nominated> getNomination() {
+        return nomination;
     }
 
-    public void setMovie(Set<Movie> movie) {
-        this.movie = movie;
-    }
-
-    public Set<Actor> getActor() {
-        return actor;
-    }
-
-    public void setActor(Set<Actor> actor) {
-        this.actor = actor;
-    }
-
-    public Set<Director> getDirector() {
-        return director;
-    }
-
-    public void setDirector(Set<Director> director) {
-        this.director = director;
+    public String toString() {
+        String result = "";
+        result = result + getId() + "\n";
+        result = result + getName() + "\n";
+        result = result + getYear() + "\n";
+        return result;
     }
 }

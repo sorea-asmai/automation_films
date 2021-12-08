@@ -1,14 +1,16 @@
 package com.backend.automationfilms;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity  // Makes a table for this class
 @Table(name = "person")  // Names the table
@@ -26,22 +28,19 @@ public class Person {
     // Person's lastname
     private String lastName;
 
-    // Person's date of birth
-    private Date dateBirth;  // Not sure we need this?
+    private String role;
 
-    // Person's date of death if applicable
-    private Date dateDeath;   // Not sure we need this?
-
-    // One to one relationship with actor
-    @OneToOne(mappedBy = "person")
-    private Actor actor;
-
-    // One to one relationship with director
-    @OneToOne(mappedBy = "person")
-    private Director director;
+    @OneToMany(mappedBy = "person")
+    @JsonBackReference
+    Set<Nominated> nomination;
 
     // Getter and setter methods
     // Can be changed or deleted based on need
+
+    public Integer getId() {
+        return id;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -54,39 +53,24 @@ public class Person {
         return lastName;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public Date getDateBirth() {
-        return dateBirth;
-    }
-
-    public void setDateBirth(Date dateBirth) {
-        this.dateBirth = dateBirth;
-    }
-
-    public Date getDateDeath() {
-        return dateDeath;
-    }
-
-    public void setDateDeath(Date dateDeath) {
-        this.dateDeath = dateDeath;
-    }
-
-    public Actor getActor() {
-        return actor;
-    }
-
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    } 
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public void setDirector(Director director) {
-        this.director = director;
+    public String toString() {
+        String result = "";
+        result = result + getId() + "\n";
+        result = result + getFirstName() + "\n";
+        result = result + getLastName() + "\n";
+        result = result + getRole() + "\n";
+        return result;
     }
 }

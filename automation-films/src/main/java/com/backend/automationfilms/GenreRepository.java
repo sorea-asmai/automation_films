@@ -10,7 +10,9 @@ import com.backend.automationfilms.*;
 // This will be AUTO IMPLEMENTED by Spring into a Bean called filmRepository
 // CRUD refers Create, Read, Update, Delete
 
-public interface FilmRepository extends CrudRepository<Nominated, Integer> {
-    @Query("SELECT n FROM Nominated n WHERE n.awardCategory = ?1 AND n.movie = ?2")
-    Collection<Nominated> findNominationByAwardAndMovie(AwardCategory award, Movie movie);
+public interface GenreRepository extends CrudRepository<Genre, Integer> {
+
+    @Query("SELECT g FROM Genre g WHERE g.name = ?1")
+    Collection<Genre> findGenreByName(String name);
+
 }
