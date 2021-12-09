@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.backend.automationfilms.*;
 
@@ -12,10 +13,15 @@ import com.backend.automationfilms.*;
 
 public interface AwardCategoryRepository extends CrudRepository<AwardCategory, Integer> {
 
-    @Query("SELECT a FROM AwardCategory a WHERE a.name = ?1")
-    Collection<AwardCategory> findAwardCategoryByName(String name);
+    @Query("SELECT a FROM AwardCategory a WHERE a.name = ?1 ORDER BY a.year DESC")
+    List<AwardCategory> findAwardCategoryByName(String name);
 
     @Query("SELECT a FROM AwardCategory a WHERE a.name = ?1 AND a.year = ?2")
-    Collection<AwardCategory> findAwardCategoryByNameAndYear(String name, int year);
+    List<AwardCategory> findAwardCategoryByNameAndYear(String name, int year);
 
+    @Query("SELECT a FROM AwardCategory a WHERE a.id = ?1")
+    List<AwardCategory> findAwardCategoryById(int id);
+
+    @Query("SELECT a FROM AwardCategory a WHERE a.year = ?1")
+    List<AwardCategory> findAwardCategoryByYear(int year);
 }
