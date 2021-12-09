@@ -1,6 +1,8 @@
 package com.backend.automationfilms;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -92,7 +95,7 @@ public class MainController {
         awardCategoryRepository.save(awardCategory);
       }
       //Looking again to get the award category if it was added
-      awardCollection = awardCategoryRepository.findAwardCategoryByName(awardObject.get("name").asText());
+      awardCollection = awardCategoryRepository.findAwardCategoryByNameAndYear(awardObject.get("name").asText(), awardObject.get("year").asInt());
       AwardCategory award = awardCollection.iterator().next();
 
       //Get the person information from the json object and find/create an person from that.
@@ -132,12 +135,206 @@ public class MainController {
       //Used to see data after inputed into database
       //Not important
       return nominated;
-    } 
+    }
 
-    @GetMapping(path="/all", produces = "application/json")
-    public @ResponseBody Iterable<Nominated> getAllAwards() {
-      // This returns a JSON or XML with the users
-        return filmRepository.findAll();
+    @GetMapping(path="/movie/{movieName}/{movieYear}")
+    public String movie(@PathVariable String movieName, @PathVariable int movieYear, Model model) {
+      Movie movie = movieRepository.findMovieByNameAndYear(setSpaces(movieName), movieYear).iterator().next();
+      model.addAttribute("movie", movie);
+      return "movie.html";
+    }
+
+    @GetMapping("/awards")
+    @ResponseBody
+    public List<AwardCategory> allAwards() {
+      return (List<AwardCategory>)awardCategoryRepository.findAll();
+    }
+
+    @GetMapping("/awards/{id}")
+    @ResponseBody
+    public AwardCategory awardById(@PathVariable int id) {
+      return awardCategoryRepository.findById(id).get();
+    }
+
+    @GetMapping("/awards/search")
+    @ResponseBody
+    public List<AwardCategory> searchAward(@RequestParam Map<String,String> allParams) {
+      if(allParams.containsKey("id")) {
+        try {
+          return awardCategoryRepository.findAwardCategoryById(Integer.parseInt(allParams.get("id")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("name") && allParams.containsKey("year")) {
+        try {
+          return awardCategoryRepository.findAwardCategoryByNameAndYear(setSpaces(allParams.get("name")), Integer.parseInt(allParams.get("year")));
+        } catch (NumberFormatException nfe) {
+          return awardCategoryRepository.findAwardCategoryByName(setSpaces(allParams.get("name")));
+        }
+      } else if(allParams.containsKey("name")) {
+        return awardCategoryRepository.findAwardCategoryByName(setSpaces(allParams.get("name")));
+      } else if(allParams.containsKey("year")) {
+        try {
+          return awardCategoryRepository.findAwardCategoryByYear(Integer.parseInt(allParams.get("year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else {
+        return (List<AwardCategory>)awardCategoryRepository.findAll();
+      }
+    }
+
+    //Gets all movies in repo
+    @GetMapping("/movies")
+    @ResponseBody
+    public List<Movie> allMovies() {
+      return (List<Movie>)movieRepository.findAll();
+    }
+
+    //Gets movie by the inputed id
+    @GetMapping("/movies/{id}")
+    @ResponseBody
+    public Movie movieById(@PathVariable int id) {
+      return movieRepository.findById(id).get();
+    }
+
+    //Different searches through the movie repo
+    @GetMapping("/movies/search")
+    @ResponseBody
+    public List<Movie> searchMovie(@RequestParam Map<String,String> allParams) {
+      if(allParams.containsKey("id")) {
+        try {
+          return movieRepository.findMovieById(Integer.parseInt(allParams.get("id")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("name") && allParams.containsKey("year")) {
+        try {
+          return (List<Movie>)movieRepository.findMovieByNameAndYear(setSpaces(allParams.get("name")), Integer.parseInt(allParams.get("year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("name")) {
+          return movieRepository.findMovieByName(setSpaces(allParams.get("name")));
+      } else if(allParams.containsKey("year")) {
+        try {
+          return movieRepository.findMovieByYear(Integer.parseInt(allParams.get("year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("genre")) {
+          return movieRepository.findMovieByGenre(allParams.get("genre"));
+      } else {
+        return (List<Movie>)movieRepository.findAll();
+      }
+    }
+
+    //Gets movies by genre id
+    @GetMapping("/genre/{id}")
+    @ResponseBody 
+    public Genre moviesByGenreId(@PathVariable int id) {
+      return genreRepository.findById(id).get();
+    }
+
+    //Gets all nominations in repo
+    @GetMapping("/nominations")
+    @ResponseBody
+    public List<Nominated> allNominations() {
+      return (List<Nominated>)filmRepository.findAll();
+    }
+
+    //Gets nomination by inputed id
+    @GetMapping("/nominations/{id}")
+    @ResponseBody
+    public Nominated nominationById(@PathVariable int id) {
+      return filmRepository.findById(id).get();
+    }
+
+    //Different searches through the nomination repo
+    @GetMapping("/nominations/search")
+    @ResponseBody
+    public List<Nominated> searchNominations(@RequestParam Map<String,String> allParams) {
+      if(allParams.containsKey("id")) {
+        try {
+          return filmRepository.findNominationById(Integer.parseInt(allParams.get("id")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("movie_name") && allParams.containsKey("movie_year")) {
+        try {
+          return filmRepository.findNominationByMovieNameAndYear(setSpaces(allParams.get("movie_name")), Integer.parseInt(allParams.get("movie_year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("movie_name")) {
+        return filmRepository.findNominationByMovieName(setSpaces(allParams.get("movie_name")));
+      } else if(allParams.containsKey("movie_year")) {
+        try {
+          return filmRepository.findNominationByMovieYear(Integer.parseInt(allParams.get("movie_year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("award")) {
+        return filmRepository.findNominationByAwardName(setSpaces(allParams.get("award")));
+      } else if(allParams.containsKey("winner")) {
+        return filmRepository.findNominationByWinning(Boolean.valueOf(allParams.get("winner")));
+      } else if(allParams.containsKey("person_fname") && allParams.containsKey("person_lname")) {
+        return filmRepository.findNominationByPersonFnameAndLname(setSpaces(allParams.get("person_fname")), allParams.get("person_lname"));
+      } else if(allParams.containsKey("person_fname")) {
+        return filmRepository.findNominationByPersonFname(setSpaces(allParams.get("person_fname")));
+      } else if(allParams.containsKey("person_lname")) {
+        return filmRepository.findNominationByPersonLname(allParams.get("person_lname"));
+      } else {
+        return (List<Nominated>)filmRepository.findAll();
+      }
+    }
+
+    //Gets all people in repo
+    @GetMapping("/persons")
+    @ResponseBody
+    public List<Person> allPersons() {
+      return (List<Person>)personRepository.findAll();
+    }
+
+    //Gets person by id
+    @GetMapping("/persons/{id}")
+    @ResponseBody
+    public Person personById(@PathVariable int id) {
+      return personRepository.findById(id).get();
+    }
+
+    //Different searchs through the person repo
+    @GetMapping("/persons/search")
+    @ResponseBody
+    public List<Person> searchPersons(@RequestParam Map<String,String> allParams) {
+      if(allParams.containsKey("id")) {
+        try {
+          return (List<Person>)personRepository.findPersonById(Integer.parseInt(allParams.get("id")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
+      } else if(allParams.containsKey("fname") && allParams.containsKey("lname")) {
+        return (List<Person>)personRepository.findPersonByName(setSpaces(allParams.get("fname")), allParams.get("lname"));
+      } else if(allParams.containsKey("fname")) {
+        return personRepository.findPersonByFname(setSpaces(allParams.get("fname")));
+      } else if(allParams.containsKey("lname")) {
+        return personRepository.findPersonByLname(allParams.get("lname"));
+      } else if(allParams.containsKey("role")) {
+        return personRepository.findPersonByRole(allParams.get("role"));
+      } else {
+        return (List<Person>)personRepository.findAll();
+      }
+    }
+
+    public String setSpaces(String s) {
+      String sArray[] = s.split("_");
+      s = "";
+      for(int i=0; i<sArray.length; i++) {
+        s += sArray[i] + " ";
+      }
+      s = s.trim();
+      
+      return s;
     }
 
     // Example for search and drop down menu
@@ -152,5 +349,4 @@ public class MainController {
         
         return entity;
     }*/
-    
 }
