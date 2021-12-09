@@ -23,24 +23,25 @@ position: absolute;
 width: 1244px;
 height: 47px;
 left: 98px;
-top: 879px;
+top: 900px;
 }
 
   
-/* Category - best picture */
+/* Category */
 #category{
   
 position: static;
 width: 400px;
 height: 20px;
 left: -100px;
-top: -50px;
+top: 00px;
+padding: 10px;
 
 font-family: 'Courier New';
 font-style: normal;
 font-weight: bold;
 font-size: 30px;
-line-height: 100px;
+line-height: 50px;
 /* identical to box height */
 
 color: #000000;
@@ -76,24 +77,39 @@ margin: 0px 1250px;
 .column {
   float: left;
   width: 18%;
-  padding: 10px;
+  padding: 5px;
 }
 
-.row: after {
+.row::after {
   content: "";
   clear: both;
   display: table;
 }
+/* fix movies list block */
+clearfix::after
+{
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+
 
 /* Movie (1,1)----------------------------------------- */
 /* Movie Size 1 */
 #movieSize1 {
-
 position: static;
 width: 250px;
 height: 370px;
 left: 30px;
-top: 0px;
+
 
 background: url(.jpg);
 
@@ -160,11 +176,12 @@ margin: 12px 0px;
 /* Movie (1,2)------------------------------------------ */
 /* Movie Size 2 */
 #movieSize2 {
+
 position: absolute;
 width: 250px;
 height: 370px;
 left: 0px;
-top: 0px;
+top: -50px;
 
 background: url(.jpg);
 
@@ -174,6 +191,7 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin: 12px 0px;
+margin-top: 800px;
 
 }
 
@@ -303,6 +321,7 @@ margin: 12px 0px;
 /* Movie (1,4)------------------------------------------ */
 /* Movie Size 4 */
 #movieSize4 {
+border-spacing: 5px 1rem;
 position: absolute;
 width: 250px;
 height: 370px;
@@ -374,11 +393,14 @@ margin: 12px 0px;
 /* Movie (1,5)------------------------------------------ */
 /* Movie Size 5 */
 #movieSize5 {
+border-spacing: 5px 1rem;
 position: absolute;
 width: 250px;
 height: 370px;
 left: 0px;
 top: 0px;
+padding: 16px;
+
 
 background: url(.jpg);
 
