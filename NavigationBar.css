@@ -1,0 +1,111 @@
+/* Let Get Start Text */
+#startText {
+/* Button Text */
+position: absolute;
+height: 22px;
+left: 25px;
+right: 24px;
+top: calc(50% - 22px/2);
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 30px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+}
+
+/* Let Get Start Position */
+#startPosition {
+position: absolute;
+width: 1440px;
+height: 80px;
+left: 600px;
+top: 450px;
+
+}
+
+/* Let Get Start Background */
+#startBackground{
+  background: #ffff;
+  background-size: 100px 80px;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+/* Automation Films - Main Title */
+#mainTitle {
+position: absolute;
+width: 906px;
+height: 258px;
+left: 350px;
+top: 100px;
+
+font-family: Just Another Hand;
+font-style: normal;
+font-weight: normal;
+font-size: 100px;
+line-height: 100px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F9F9F9;
+}
+
+
+/* Styles the top Nav. bar*/
+.topnav {
+  padding-top: 0px;
+  margin-top: 0px;
+  background-color: #111827;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.top_av a.active {
+  background-color: black;
+  color: white;
+}
+
+/*Changes the inside of the search bar*/
+
+.top_nav input[type=search]{
+  float: c;
+  text-align: center;
+  padding: 8px;
+  width: 50%;
+  border: ridge;
+  border-color: white;
+  background: #E5E5E5;
+  margin-top: 6px;
+  font-size: 18px;
+  color: black;
+}

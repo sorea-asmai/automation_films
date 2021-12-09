@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="SingleMovie.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+
+
+	<script>
+		<body>
+	  <title id= "title"><% title %></title>
+     <p id= "singleMovie_cover">
+      <img alt='title' src= 'movie_image' width="720" height="1040"> 
+    </p>
+    <h2 id= "streaming_title">Available Streaming Platforms:</h2>
+    <p id= "singleMovie_cover">
+      <img alt='title' src= 'movie_image' width="720" height="1040"> 
+    </p>
+
+    <p id= "streaming_plat">
+      <img alt='title' src= "https://static1.srcdn.com/wordpress/wp-content/uploads/2019/10/App-Icons-Streaming-Services.jpg" width="720" height="1040">
+    </p>
+
+    <!-- Year, Awarded, Nominations, Descriptiion -->
+    <p id = "year">Year: <% year %></p>
+    <p id = "awarded">Awarded: <% awarded %></p>
+    <p id = "nominations">Nominations: <% nominations %></p>
+    <p id = "descriptions"><% description %></p>
+    
+</body>
+
+<!-- Recommendation -->
+<body>
+<div class="column">" 
+<p id = "line"></p>
+<h2 id = "recommendation" >Recommendation</h2>
+
+int i;
+
+<!-- 4 Movies for Recommendation -->
+for(i = 0; i < data.movies[4]; i++) {
+<img alt='title' src= 'movie_image' width="250" height="370">" +
+"<p id="subMovieTitle"> <%= title %> </p>" 
+"<p id="subMovieYear"> <%= year %> </p>" 
+}
+
+</div>
+</body>
+</script>
+
+
+</html>

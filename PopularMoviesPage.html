@@ -5,89 +5,229 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Popular Movie Page</title>
-	<link href="nav.css" rel="stylesheet" type="text/css" />
+	<link href="NavigationBar.css" rel="stylesheet" type="text/css" />
 	<link href="PopularMoviesPage.css" rel="stylesheet" type="text/css" />
 	<link href="visual.css" rel="stylesheet" type="text/css" />
-	<link href="Row1.css" rel="stylesheet" type="text/css" />
+	<link href="Row.css" rel="stylesheet" type="text/css" />
 </head>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="topnav">
-	<a class="active" href="#Auto"><big>Automation Films</a></big>
-    <input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
-    <button type="submit"><i class=" fa fa-search"></i></button>
-	</div>
-</body>
-
-
 <body>
-  <a href="https://posterspy.com/wp-content/uploads/2020/11/NOMADLAND-HIGHRES-1500x1875.jpg/">
-    <img alt="Alt text" src="popularmain.png">
-  </a>
-  <p id="nomandlandTitle"> Nomandland <p>
-  <p id="nomandlandTitle1"> Best Picture | Best Actress | Best Director
-  <p id="text"> Main > Popular Movies <p>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<div class="topnav">
+		<a class="active" href="./index.html"><img alt="Logo" src="https://cdn.pixabay.com/photo/2015/12/09/22/24/filmklappe-1085692_1280.png" width="30" height="30"></a>
+         <a class="active" href="./ContactUs.html"><big>Contact Us</a><big>
+         <input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
+         <button type="submit"><i class=" fa fa-search"></i></button>
+      </div>
+      <a href="https://posterspy.com/wp-content/uploads/2020/11/NOMADLAND-HIGHRES-1500x1875.jpg/">
+      <img alt="Alt text" src="popularmain.png">
+      </a>
+      <p id="nomandlandTitle"> Nomandland 
+      <p>
+      <p id="nomandlandTitle1"> Best Picture | Best Actress | Best Director</p>
+      <p id="text"> Main > Popular Movies 
+      <p>
+      <div class="dropdown">
+         <button class="dropbtn">Categories</button>
+         <div class="dropdown-content">
+            <a href="#best-picture">Best picture</a>
+            <a href="#best-animated">Best Animated Feature</a>
+            <a href="#best-original">Best Original Score</a>
+            <a href="#adapted-screenplay">Adapted Screenplay</a>
+         </div>
+      </div>
+      <a id = "best-picture">
+      <p id = "category">Best Picture</p>
+        <p id = "seeMore"> See More</p>
+      </a>
+      <!-- Row 1 of Movies -->
+      <div class="row clearfix">
+         <div class="column">
   
-
-  <div class= "dropdown">
-
- </body>
- <hr>
-
-
-<body>
-	<p id = "category">Best Picture</p>
-  <p id = "seeMore"> See More-></p>
-</body>
-
-<body>
-  <!-- Row 1 of Movies -->
-    <div class="row">
-      <div class="column">
-        <!-- Movie (1,1) -->
-        <a href="movieSize1">
-          <img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg"width="250" height="370">
-        </a>
+            <!-- Movie (1,1) -->
+            <img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg"width="250" height="370">
             <p id = "movieTitle1">Dunkirk</p>
             <p id = "movieYear1">2017</p>
+         </div>
+         <!-- Movie (1,2) -->
+         <div class="column">
+            <a href="movieSize">
+            <img alt="Alt text" src="https://resizing.flixster.com/BTfIie-NvRxbSUkUyLfZs-2wdM0=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2QzNTE2ZWE4LWIyY2MtNDcyMC05ZmNhLWMwZWU3NGNlOGYzYi53ZWJw"" width="250" height="370">
+            </a>
+            <p id = "movieTitle2">Spider-Man: Into the Spider-Verse</p>
+            <p id = "movieYear2">2021</p>
+         </div>
+         <!-- Movie (1,3) -->
+         <div class="column">
+            <a href="movieSize">
+            <img alt="Alt text" src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle3">Batman Begins</p>
+            <p id = "movieYear3">2021</p>
+         </div>
+         <!-- Movie (1,4) -->
+         <div class="column">
+            <a href="movieSize">
+            <img alt="Alt text" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle4">Stranger Things</p>
+            <p id = "movieYear4">2021</p>
+         </div>
+         <!-- Movie (1,5) -->
+         <div class="column">
+            <a href="movieSize">
+            <img alt="Alt text" src="https://m.media-amazon.com/images/I/61J8wQhWiCL.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle5">Bob's Burger</p>
+            <p id = "movieYear5">2021</p>
+         </div>
       </div>
-      
-  <!-- Movie (1,2) -->
-    <div class="column">
-      <a href="movieSize2">
-        <img alt="Alt text" src="https://resizing.flixster.com/BTfIie-NvRxbSUkUyLfZs-2wdM0=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2QzNTE2ZWE4LWIyY2MtNDcyMC05ZmNhLWMwZWU3NGNlOGYzYi53ZWJw"" width="250" height="370">
+      <div class="block-title">
+      <a id = "best-animated">
+      <h1 id = "category">Best Animated Feature</h1>
+        <p id = "seeMore"> See More</p>
       </a>
-        <p id = "movieTitle2">Spider-Man: Into the Spider-Verse</p>
-        <p id = "movieYear2">2021</p>
-    </div>
-  
-  <!-- Movie (1,3) -->
-   <div class="column">
-    <a href="movieSize3">
-     <img alt="Alt text" src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" width="250" height="370">
-    </a>
-    <p id = "movieTitle3">Batman Begins</p>
-    <p id = "movieYear3">2021</p>
-  </div>
-
-  <!-- Movie (1,4) -->
-   <div class="column">
-    <a href="movieSize4">
-      <img alt="Alt text" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg" width="250" height="370">
-    </a>
-      <p id = "movieTitle4">Stranger Things</p>
-      <p id = "movieYear4">2021</p>
-  </div>
-
-  <!-- Movie (1,5) -->
-   <div class="column">
-    <a href="movieSize5">
-      <img alt="Alt text" src="https://m.media-amazon.com/images/I/61J8wQhWiCL.jpg" width="250" height="370">
-    </a>
-      <p id = "movieTitle5">Bob's Burger</p>
-      <p id = "movieYear5">2021</p>
-  </div>
-</div>
-</body>
-
+   
+	  </div>
+      <div class="block-content">
+         <!-- Row 2 of Movies -->
+         <div class="row clearfix">
+            <div class="column">
+               <!-- Movie (2,1) -->
+               <a href="movieSize1">
+               <img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg"width="250" height="370">
+               </a>
+               <p id = "movieTitle1">Dunkirk</p>
+               <p id = "movieYear1">2017</p>
+            </div>
+            <!-- Movie (2,2) -->
+            <div class="column">
+               <a href="movieSize2">
+               <img alt="Alt text" src="https://resizing.flixster.com/BTfIie-NvRxbSUkUyLfZs-2wdM0=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2QzNTE2ZWE4LWIyY2MtNDcyMC05ZmNhLWMwZWU3NGNlOGYzYi53ZWJw"" width="250" height="370">
+               </a>
+               <p id = "movieTitle2">Spider-Man: Into the Spider-Verse</p>
+               <p id = "movieYear2">2021</p>
+            </div>
+            <!-- Movie (2,3) -->
+            <div class="column">
+               <a href="movieSize3">
+               <img alt="Alt text" src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" width="250" height="370">
+               </a>
+               <p id = "movieTitle3">Batman Begins</p>
+               <p id = "movieYear3">2021</p>
+            </div>
+            <!-- Movie (2,4) -->
+            <div class="column">
+               <a href="movieSize4">
+               <img alt="Alt text" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg" width="250" height="370">
+               </a>
+               <p id = "movieTitle4">Stranger Things</p>
+               <p id = "movieYear4">2021</p>
+            </div>
+            <!-- Movie (2,5) -->
+            <div class="column">
+               <a href="movieSize5">
+               <img alt="Alt text" src="https://m.media-amazon.com/images/I/61J8wQhWiCL.jpg" width="250" height="370">
+               </a>
+               <p id = "movieTitle5">Bob's Burger</p>
+               <p id = "movieYear5">2021</p>
+            </div>
+         </div>
+      </div>
+      <a id = "best-original">
+      <h1 id = "category">Best Original Score</h1>
+         <p id = "seeMore">See More</p>
+      </a>
+      <!-- Row 3 of Movies -->
+      <div class="row clearfix">
+         <div class="column">
+            <!-- Movie (3,1) -->
+            <a href="movieSize1">
+            <img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg"width="250" height="370">
+            </a>
+            <p id = "movieTitle1">Dunkirk</p>
+            <p id = "movieYear1">2017</p>
+         </div>
+         <!-- Movie (3,2) -->
+         <div class="column">
+            <a href="movieSize2">
+            <img alt="Alt text" src="https://resizing.flixster.com/BTfIie-NvRxbSUkUyLfZs-2wdM0=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2QzNTE2ZWE4LWIyY2MtNDcyMC05ZmNhLWMwZWU3NGNlOGYzYi53ZWJw"" width="250" height="370">
+            </a>
+            <p id = "movieTitle2">Spider-Man: Into the Spider-Verse</p>
+            <p id = "movieYear2">2021</p>
+         </div>
+         <!-- Movie (3,3) -->
+         <div class="column">
+            <a href="movieSize3">
+            <img alt="Alt text" src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle3">Batman Begins</p>
+            <p id = "movieYear3">2021</p>
+         </div>
+         <!-- Movie (3,4) -->
+         <div class="column">
+            <a href="movieSize4">
+            <img alt="Alt text" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle4">Stranger Things</p>
+            <p id = "movieYear4">2021</p>
+         </div>
+         <!-- Movie (3,5) -->
+         <div class="column">
+            <a href="movieSize5">
+            <img alt="Alt text" src="https://m.media-amazon.com/images/I/61J8wQhWiCL.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle5">Bob's Burger</p>
+            <p id = "movieYear5">2021</p>
+         </div>
+      </div>
+      <a id="adapted-screenplay">
+      <h1 id = "category">Adapted Screenplay</h1>
+         <p id = "seeMore"> See More</p>
+      </a>
+      <!-- Row 4 of Movies -->
+      <div class="row clearfix">
+         <div class="column">
+            <!-- Movie (4,1) -->
+            <a href="movieSize1">
+            <img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg"width="250" height="370">
+            </a>
+            <p id = "movieTitle1">Dunkirk</p>
+            <p id = "movieYear1">2017</p>
+         </div>
+         <!-- Movie (4,2) -->
+         <div class="column">
+            <a href="movieSize2">
+            <img alt="Alt text" src="https://resizing.flixster.com/BTfIie-NvRxbSUkUyLfZs-2wdM0=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2QzNTE2ZWE4LWIyY2MtNDcyMC05ZmNhLWMwZWU3NGNlOGYzYi53ZWJw"" width="250" height="370">
+            </a>
+            <p id = "movieTitle2">Spider-Man: Into the Spider-Verse</p>
+            <p id = "movieYear2">2021</p>
+         </div>
+         <!-- Movie (4,3) -->
+         <div class="column">
+            <a href="movieSize3">
+            <img alt="Alt text" src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle3">Batman Begins</p>
+            <p id = "movieYear3">2021</p>
+         </div>
+         <!-- Movie (4,4) -->
+         <div class="column">
+            <a href="movieSize4">
+            <img alt="Alt text" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle4">Stranger Things</p>
+            <p id = "movieYear4">2021</p>
+         </div>
+         <!-- Movie (4,5) -->
+         <div class="column">
+            <a href="movieSize5">
+            <img alt="Alt text" src="https://m.media-amazon.com/images/I/61J8wQhWiCL.jpg" width="250" height="370">
+            </a>
+            <p id = "movieTitle5">Bob's Burger</p>
+            <p id = "movieYear5">2021</p>
+         </div>
+      </div>
+      <a id = "adapted-screenplay"></a>
+   </body>
 </html>

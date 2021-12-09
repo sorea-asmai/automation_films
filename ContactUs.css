@@ -1,0 +1,787 @@
+.column {
+  float: left;
+  width: 18%;
+  padding: 10px;
+}
+
+/* main > contant us*/
+#contact-us{
+position: absolute;
+width: 575px;
+height: 34px;
+left: 57px;
+top: 50px;
+
+font-family: 'Courier New';
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+
+color: #000000;
+}
+
+/*our-team*/
+#our-team{
+  position: absolute;
+  width: 363px;
+  height: 57px;
+  left: 200px;
+  top: 64px;
+
+  font-family: Monserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 57px;
+  display: flex;
+  text-align: center;
+  letter-spacing: 0,.2px;
+  color: black;
+}
+
+/* Team image */
+.image{
+  position: absolute;
+  left: 47px;
+  top: 246px;
+}
+
+/* Have a question? */
+.contact-form {
+  position: absolute;
+  width: 363px;
+  height: 57px;
+  left: 950px;
+  top: 140px;
+}
+
+/*Name submit bar*/
+.name input[type=text]{
+  
+  padding: 0px;
+
+  position: static;
+  width: 140px;
+  height: 20px;
+  left: calc(50% - 537px/2);
+  top: 161px;
+
+  background: #FFFFFF;
+
+  flex: none;
+  order: 1;
+  align-self: s
+  margin: 40px 0px;
+}
+
+/* h2 */
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height, or 142% */
+text-align: center;
+letter-spacing: 0.2px;
+
+/* text-color */
+color: #252B42;
+
+}
+
+/* Full Name Box */
+#nameBox {
+position: static;
+width: 255px;
+height: 50px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 20px;
+
+}
+
+/* Full Name Background */
+#nameBackground {
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #F9F9F9;
+border: 1px solid #E6E6E6;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+/* Name Text */
+#name {
+position: absolute;
+width: 84px;
+height: 28px;
+left: 21px;
+top: calc(50% - 28px/2);
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+letter-spacing: 0.2px;
+
+/* second-text-color */
+color: #737373;
+}
+
+/* Email Box */
+#emailBox {
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #F9F9F9;
+border: 1px solid #E6E6E6;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+
+/* Email Text */
+#email {
+position: absolute;
+width: 51px;
+height: 28px;
+left: 21px;
+top: calc(50% - 28px/2);
+
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+letter-spacing: 0.2px;
+
+/* second-text-color */
+color: #737373;
+
+}
+
+/* Email Position */
+#emailPostion {
+position: static;
+width: 255px;
+height: 50px;
+left: 275px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 20px;
+
+}
+
+
+
+/* Frame 2 */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+display: none;
+width: 530px;
+height: 50px;
+left: 3.5px;
+top: 70px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 20px 0px;
+
+
+/* custom-select */
+
+position: static;
+width: 255px;
+height: 50px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 20px;
+
+
+/* select */
+
+position: absolute;
+height: 50px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+
+
+/* option */
+
+position: absolute;
+height: 50px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+background: #F9F9F9;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 5px;
+
+
+/* Dropdown */
+
+position: absolute;
+width: 97px;
+height: 28px;
+left: 18px;
+top: calc(50% - 28px/2);
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+letter-spacing: 0.2px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 8px;
+height: 14px;
+right: 21.01px;
+top: calc(50% - 14px/2 + 3px);
+
+/* second-text-color */
+background: #737373;
+transform: rotate(90deg);
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 79px;
+
+
+
+/* List Entry  1 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 119px;
+
+
+
+/* List Entry  2 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* primary-color */
+color: #23A6F0;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 159px;
+
+
+
+/* List Entry  3 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 199px;
+
+
+
+/* List Entry  4 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 239px;
+
+
+
+/* List Entry  5 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* custom-select */
+
+position: static;
+width: 255px;
+height: 50px;
+left: 275px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 20px;
+
+
+/* select */
+
+position: absolute;
+height: 50px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+
+
+/* option */
+
+position: absolute;
+height: 50px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+background: #F9F9F9;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 5px;
+
+
+/* Dropdown */
+
+position: absolute;
+width: 104px;
+height: 24px;
+left: 18px;
+top: calc(50% - 24px/2 - 2px);
+
+/* h6 */
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+letter-spacing: 0.2px;
+
+/* muted-color */
+color: #BDBDBD;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 8px;
+height: 14px;
+right: 21.01px;
+top: calc(50% - 14px/2 + 3px);
+
+/* second-text-color */
+background: #737373;
+transform: rotate(90deg);
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 79px;
+
+
+
+/* List Entry  1 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 119px;
+
+
+
+/* List Entry  2 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* primary-color */
+color: #23A6F0;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 159px;
+
+
+
+/* List Entry  3 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 199px;
+
+
+
+/* List Entry  4 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* option */
+
+position: absolute;
+visibility: hidden;
+width: 89px;
+height: 16px;
+left: 25px;
+top: 239px;
+
+
+
+/* List Entry  5 */
+
+position: absolute;
+width: 89px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+/* identical to box height, or 107% */
+letter-spacing: 0.1px;
+
+/* second-text-color */
+color: #737373;
+
+
+
+/* Message Background */
+
+position: static;
+width: 537px;
+height: 140px;
+left: 0px;
+top: 70px;
+
+background: #F9F9F9;
+/* muted-color */
+border: 1px solid #BDBDBD;
+box-sizing: border-box;
+border-radius: 5px;
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+margin: 20px 0px;
+
+
+/* Message Text */
+
+position: absolute;
+width: 65px;
+height: 24px;
+left: 26px;
+top: 16px;
+
+/* h6 */
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+letter-spacing: 0.2px;
+
+/* muted-color */
+color: #BDBDBD;
+
+
+
+/* Submit Button */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px 40px;
+
+position: static;
+width: 135px;
+height: 58px;
+left: 261px;
+top: 411px;
+
+background: #B91C1C;
+border-radius: 5px;
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 40px 0px;
+
+
+/* Submit Text */
+
+position: static;
+left: 29.63%;
+right: 29.63%;
+top: 25.86%;
+bottom: 25.86%;
+
+/* btn-text */
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+text-align: center;
+letter-spacing: 0.2px;
+
+/* light-text-color */
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
