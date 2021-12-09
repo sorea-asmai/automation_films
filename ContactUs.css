@@ -62,7 +62,7 @@ color: #000000;
   padding: 0px;
 
   position: static;
-  width: 140px;
+  width: 150px;
   height: 20px;
   left: calc(50% - 537px/2);
   top: 161px;
@@ -71,7 +71,7 @@ color: #000000;
 
   flex: none;
   order: 1;
-  align-self: s
+  align-self: s;
   margin: 40px 0px;
 }
 

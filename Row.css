@@ -101,7 +101,9 @@ table {
   border-spacing: 0 16px;
 }
 
-
+.movie-year{
+  margin: 25px 0 !important;
+  }
 /* Movie (1,1)----------------------------------------- */
 /* Movie Size 1 */
 #movieSize1 {
