@@ -7,42 +7,54 @@
 	<title>replit</title>
 	<link href="ContactUs.css" type="text/css" rel="stylesheet" />
 	<link href="NavigationBar.css" rel="stylesheet" type="text/css" />
+  <link href="PopularMoviesPage.css" rel="stylesheet" type="text/css" />
 </head>
 
+<!-- Background Size -->
+<style>
+	body {
+    margin:0;
+    padding:0;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+    background-color: #FDFFFF;
+	}
+</style>
+
+<!-- Navigation Bar -->
 <body>
-	<body>
 	<div class="NavigationBar">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Home Icon -->
 		<a class="active" href="./index.html"><img alt="Logo" src="https://cdn.pixabay.com/photo/2015/12/09/22/24/filmklappe-1085692_1280.png" width="30" height="30"></a>
-         <a class="active" href="./PopularMoviesPage.html"><big>HOME</a><big>
-         <!-- Search Bar - Search Your Favorite Film? -->
-         <input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
-         <button type="submit"><i class=" fa fa-search"></i></button>
-      </div>
 
+    <!-- Popular Movies Icon -->
+    <a class="active" href="./PopularMoviesPage.html"><big>Trending Oscar Films</a><big>
 
-  <p id = "contact-us">Main > Contact Us</p>
+    <!-- Contact Us Icon -->
+    <a class="active" href="./ContactUs.html"><big>Contact Us</a><big>
+      
+	</div>
+</body>
+    <!-- Bread Crumb -->
+    <ul class ="breadCrumb"> 
+          <li><a href="./index.html">Home</a></li>
+          <li>Contact Us</li>
+    </ul>
   <p id = "our-team"> Our Team </p>
   
   <div class ="image">
-    <img src="https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Team" width="610px" height="500px">
+    <img src="https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Team" width="667px" height="481px">
 
   </div>
 
   <div class="contact-form">
-    <h3>Contact Us</h3>
-    <h1>Have a question?</h1>
-  </div>
-
-
-  <div class = "name">
-    <!--<input type="text" name="full name" placeholder="Full Name *">-->
-  </div>
-
-  <div class = "nameBackground"></div>
-
-  <div class = "emailPosition">
-    <p id = "email"></p>
+    <h1><center>Do You Have Award-Winning Questions?</center></h1>
+    <h3><center>Contact Us:</center></h3>
+   <p>
+    <a href="YourFeedback@AutomationFilms.com" style = "color: #B91C1C;"><center>YourFeedback@AutomationFilms.com</center></a
+    </p>
   </div>
 </body>
 

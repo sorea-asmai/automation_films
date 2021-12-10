@@ -1,3 +1,4 @@
+/* IMDB icon */
 .imdb{
 position: absolute;
 width: 505px;
@@ -6,6 +7,7 @@ left: 926px;
 top: 409px;
 }
 
+/* Recommend Movies */
 #recommend{
 position: absolute;
 width: 329px;
@@ -34,8 +36,6 @@ flex-grow: 0;
 margin: 0px 83px;
 }
 
-
-
 /* Movie Title */
 #title {
 position: absolute;
@@ -54,24 +54,6 @@ align-items: center;
 text-align: center;
 
 color: #000000;
-}
-
-/* Breadcrumb */
-#breadcrumb {
-position: absolute;
-width: 575px;
-height: 34px;
-left: 57px;
-top: 129px;
-
-font-family: DM Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 23px;
-
-color: #000000;
-
 }
 
 /* Available Streaming Platforms: */
@@ -94,7 +76,7 @@ color: #000000;
 
 }
 
-/* Description */
+/* Description of the Movie */
 #descriptions {
 position: absolute;
 width: 558px;
@@ -114,7 +96,7 @@ color: #000000;
 
 }
 
-/* Movie Cover */
+/* Main Movie Cover */
 #singleMovie_cover {
 position: absolute;
 width: 702px;
@@ -146,23 +128,6 @@ color: #000000;
 
 }
 
-/*Breadcrumb*/
-#breadcrumb{
-position: absolute;
-width: 575px;
-height: 34px;
-left: 10px;
-top: 100px;
-
-font-family: 'Courier New';
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 28px;
-
-color: #000000;
-}
-
 /* Awarded: Best Singer */
 #awarded {
 position: absolute;
@@ -182,7 +147,6 @@ align-items: center;
 color: #000000;
 }
 
-
 /* Year: 2016 */
 #year {
 position: absolute;
@@ -201,7 +165,6 @@ align-items: center;
 
 color: #000000;
 }
-
 
 /* Streaming Platform */
 #streaming_plat {
@@ -228,7 +191,7 @@ background: url(image.png);
   display: table;
 }
 
-/* Sub Movie Title */
+/* Recommend - Sub Movie Title */
 #subMovieTitle {
 position: static;
 width: 250px;
@@ -253,7 +216,7 @@ flex-grow: 0;
 margin: 12px 0px;
 }
 
-/* Year */
+/* Recommend - Sub Movie Year */
 #subMovieYear {
 position: static;
 width: 114px;
@@ -270,7 +233,6 @@ line-height: 16px;
 
 /* gray/400 */
 color: #9CA3AF;
-
 
 /* Inside Auto Layout */
 flex: none;
