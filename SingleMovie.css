@@ -185,7 +185,7 @@ background: url(image.png);
 }
 
 /* Row */
-.row: after {
+.row after {
   content: "";
   clear: both;
   display: table;

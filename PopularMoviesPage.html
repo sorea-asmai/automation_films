@@ -32,10 +32,32 @@
      <!-- Popular Movies Icon -->
     <a class="active" href="./PopularMoviesPage.html"><big>Trending Oscar Films</a><big>
 
+    <!-- Test for single movie page -->
+    <a class="active" href="./SingleMovie.html"><big>Single</a><big>
+
     <!-- Search Bar - Search Your Favorite Film? -->
-    <input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
-    <button type="submit">
-    <i class=" fa fa-search"></i></button>
+    <script>
+    function movie_search() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    <input style= "margin-top: 5px;" type="search" id="myInput" onkeyup="movie_search()" placeholder="Search for movie" title="Type in a name">
+    <!--<input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
+    //<button type="submit">
+    //<i class=" fa fa-search"></i></button> -->
 
     <!-- Contact Us Icon -->
     <a class="active" href="./ContactUs.html""><big>Contact Us</a><big>

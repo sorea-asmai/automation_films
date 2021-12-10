@@ -33,9 +33,25 @@
     <a class="active" href="./PopularMoviesPage.html"><big>Trending Oscar Films</a><big>
 
     <!-- Search Bar - Search Your Favorite Film? -->
-    <input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
-    <button type="submit">
-    <i class=" fa fa-search"></i></button>
+    <script>
+    function movie_search() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    <input style= "margin-top: 5px;" type="search" id="myInput" onkeyup="movie_search()" placeholder="Search for movie" title="Type in a name">
 
     <!-- Contact Us Icon -->
     <a class="active" href="./ContactUs.html""><big>Contact Us</a><big>
@@ -82,8 +98,8 @@
       <h1 id = "category">2021</h1>
 
       <!-- Generate Data to See More Page -->
-      <h2 id = "seeMore"> <a href="./SeeMore.html" style =
-      "color: #B91C1C;">See More</h2></a>
+      <!--<h2 id = "seeMore"> <a href="./SeeMore.html" style =
+      "color: #B91C1C;">See More</h2></a>-->
 
         <!-- Column of Movies -->
          <div class="column">
@@ -134,8 +150,8 @@
     <div class="block-title">
       <a id = "Year2">
       <h1 id = "category">2020</h1>
-     <h2 id = "seeMore"> <a href="./SeeMore.html" style =
-      "color: #B91C1C;">See More</h2></a></a>
+     <!--<h2 id = "seeMore"> <a href="./SeeMore.html" style =
+      "color: #B91C1C;">See More</h2></a></a>-->
    
 	  </div>
       <div class="block-content">
@@ -187,8 +203,8 @@
       <!-- Category 3 - 2019 -->
       <a id = "#Year3">
       <h1 id = "category">2019</h1>
-     <h2 id = "seeMore"> <a href="./SeeMore.html" style =
-      "color: #B91C1C;">See More</h2>
+      <!--<h2 id = "seeMore"> <a href="./SeeMore.html" style =
+      "color: #B91C1C;">See More</h2>-->
       </a>
       </a>
   
@@ -241,8 +257,8 @@
       
       <a id="#Year4">
       <h1 id = "category">2018</h1>
-        <h2 id = "seeMore"> <a href="./SeeMore.html" style =
-      "color: #B91C1C;">See More</h2></a>
+      <!--<h2 id = "seeMore"> <a href="./SeeMore.html" style =
+      "color: #B91C1C;">See More</h2></a>-->
       </a>
 
       <!-- Row 4 of Movies -->
@@ -293,8 +309,8 @@
       <a id = "#Year5"></a>
       <a id="#Year5">
       <h1 id = "category">2017</h1>
-        <h2 id = "seeMore"> <a href="./SeeMore.html" style =
-      "color: #B91C1C;">See More</h2></a>
+      <!--<h2 id = "seeMore"> <a href="./SeeMore.html" style =
+      "color: #B91C1C;">See More</h2></a>-->
       </a>
       <!-- Row 5 of Movies -->
       <div class="row clearfix">
