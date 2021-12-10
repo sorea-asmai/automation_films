@@ -1,16 +1,5 @@
-/* Main Popular Movie Picture */
-
-#main_popular_movie_picture{
-  position: absolute;
-  width: 100%;
-  height: 655px;
-  left: 0px;
-  top: 80px;
-  margin: 0%;
-}
-/* nomandland Title */
-
-#nomandlandTitle{
+/* Header Title - Nomandland */
+#headertitle{
   position: absolute;
   max-width: 99%;
   max-height: 99%;
@@ -28,7 +17,8 @@
   color: #FFFCFC;
 }
 
-#nomandlandTitle1{
+/* Subtitle - Best Picture | Best Actress | Best Director */
+#subtitle{
 position: absolute;
 width: 808px;
 height: 179px;
@@ -46,9 +36,9 @@ text-decoration-line: underline;
 
 color: #FFFCFC;
 }
-/* Main > Popular Movies */
 
-#text{
+/* Bread Crumb - Main > Popular Movies */
+#breadCrumb{
 position: absolute;
 width: 575px;
 height: 34px;
@@ -62,27 +52,6 @@ font-size: 18px;
 line-height: 28px;
 
 color: #000000;
-}
-
-
-
-/* Popular Movies */
-popular_movie_title {
-  position: relative;
-  width: 1440px;
-  height: 3729px;
-  background: #FFFFFF;
-  }
-
-/* Main Popular Movie Cover Picture */
-cover {
-position: absolute;
-width: 1440px;
-height: 655px;
-left: 0px;
-top: 80px;
-
-background: url(https://replit.com/@SoreaAsmai/automationfilms-3#Pictures/Popular%20Movie%20Cover.jpeg);
 }
 
 /* Search Bar Position */
@@ -154,38 +123,164 @@ bottom: 2887px;
   color: red;
  }
 
+  
+/* Category */
+#category{
+  
+position: static;
+width: 400px;
+height: 20px;
+left: -100px;
+top: 00px;
+padding: 10px;
 
-/* form-control input-style-1 */
-position: absolute;
+font-family: 'Courier New';
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 50px;
+/* identical to box height */
+
+color: #000000;
+}
+
+#seeMore {
+  /* See more */
+
+position: static;
+width: 79px;
+height: 24px;
 left: 0px;
-right: 212px;
 top: 0px;
-bottom: 0px;
 
-background: #F9F9F9;
-border: 1px solid #E6E6E6;
-box-sizing: border-box;
-border-radius: 5px 0px 0px 5px;
-
-
-/* Search */
-
-position: absolute;
-width: 50px;
-height: 28px;
-left: 26px;
-top: calc(50% - 28px/2);
-
-font-family: Montserrat;
+font-family: DM Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
-line-height: 28px;
-/* identical to box height, or 200% */
-letter-spacing: 0.2px;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
 
-/* second-text-color */
-color: #737373;
+/* rose/700 */
+color: #BE123C;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 1250px;
+}
+
+.column {
+  float: left;
+  width: 18%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* fix movies list block */
+clearfix::after
+{
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+
+.movie-year{
+  margin: 25px 0 !important;
+  }
+
+/* Movie Size */
+#movieSize {
+position: static;
+width: 250px;
+height: 370px;
+left: 30px;
+
+background: url(.jpg);
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
+
+/* Movie Year */
+#movieYear {
+position: static;
+width: 56px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
+
+/* Movie Title */
+#movieTitle {
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

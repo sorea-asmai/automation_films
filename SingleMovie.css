@@ -1,14 +1,59 @@
-/* Separated Line */
-#line {
+.imdb{
 position: absolute;
-width: 1440px;
-height: 0px;
-left: 0px;
-top: 1361px;
+width: 505px;
+height: 252px;
+left: 926px;
+top: 409px;
+}
 
-border: 1px solid rgba(0, 0, 0, 0.5);
-transform: rotate(0.08deg);
+#recommend{
+position: absolute;
+width: 329px;
+height: 47px;
+left: 580px;
+top: 1300px;
 
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 75px;
+
+display: flex;
+align-items: center;
+text-align: center;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 83px;
+}
+
+
+
+/* Movie Title */
+#title {
+position: absolute;
+width: 612px;
+height: 92px;
+left: 850px;
+top: 225px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 75px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
 }
 
 /* Breadcrumb */
@@ -28,27 +73,6 @@ line-height: 23px;
 color: #000000;
 
 }
-
-/* Movie Title */
-#singleMovie_title {
-position: absolute;
-width: 612px;
-height: 92px;
-left: 777px;
-top: 225px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 64px;
-line-height: 75px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-}
-
 
 /* Available Streaming Platforms: */
 #streaming_title {
@@ -71,7 +95,7 @@ color: #000000;
 }
 
 /* Description */
-#description {
+#descriptions {
 position: absolute;
 width: 558px;
 height: 296px;
@@ -120,6 +144,23 @@ align-items: center;
 
 color: #000000;
 
+}
+
+/*Breadcrumb*/
+#breadcrumb{
+position: absolute;
+width: 575px;
+height: 34px;
+left: 10px;
+top: 100px;
+
+font-family: 'Courier New';
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+
+color: #000000;
 }
 
 /* Awarded: Best Singer */
