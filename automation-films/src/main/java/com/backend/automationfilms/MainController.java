@@ -137,12 +137,29 @@ public class MainController {
       return nominated;
     }
 
+    //Example
     @GetMapping(path="/movie/{movieName}/{movieYear}")
     public String movie(@PathVariable String movieName, @PathVariable int movieYear, Model model) {
       Movie movie = movieRepository.findMovieByNameAndYear(setSpaces(movieName), movieYear).iterator().next();
       model.addAttribute("movie", movie);
       return "movie.html";
     }
+
+     //Example
+     @GetMapping(path="/example")
+     public String popularMovies(Model model) {
+       Iterable<AwardCategory> awards = awardCategoryRepository.findAll();
+       model.addAttribute("awards", awards); 
+       return "PopularMoviesPage.html";
+     }
+
+    @GetMapping(path="/popular_movies")
+    public String home(Model model) {
+      Iterable<AwardCategory> awards = awardCategoryRepository.findAll();
+      model.addAttribute("awards", awards); 
+      return "jsPopularMovie.html";
+    }
+
 
     @GetMapping("/awards")
     @ResponseBody
@@ -250,6 +267,65 @@ public class MainController {
       return filmRepository.findById(id).get();
     }
 
+    @GetMapping("/nominations/category/{award}")
+    @ResponseBody
+    public List<Nominated> nominationByAwardName(@PathVariable String award) {
+      return filmRepository.findNominationByAwardName(setSpaces(award));
+    }
+
+    @GetMapping("/nominations/category/year/{year}")
+    @ResponseBody
+    public List<Nominated> nominationByAwardYear(@PathVariable int year) {
+      return filmRepository.findNominationByAwardYear(year);
+    }
+
+    @GetMapping("/nominations/category/{award}/{year}")
+    @ResponseBody
+    public List<Nominated> nominationByAwardNameAndYear(@PathVariable int year, @PathVariable String award) {
+      return filmRepository.findNominationByAwardNameAndYear(setSpaces(award), year);
+    }
+
+    @GetMapping("/nominations/category/{award}/{year}/winner/{winning}")
+    @ResponseBody
+    public List<Nominated> nominationByAwardNameYearAndWinning(@PathVariable int year, @PathVariable String award, @PathVariable Boolean winning) {
+      return filmRepository.findNominationByAwardNameYearAndWinning(setSpaces(award), year, winning);
+    }
+
+    @GetMapping("/nominations/movies/{movieName}")
+    @ResponseBody
+    public List<Nominated> nominationByMovieName(@PathVariable String movieName) {
+      return filmRepository.findNominationByMovieName(setSpaces(movieName));
+    }
+
+    @GetMapping("/nominations/movies/year/{movieYear}")
+    @ResponseBody
+    public List<Nominated> nominationByMovieYear(@PathVariable int movieYear) {
+      return filmRepository.findNominationByMovieYear(movieYear);
+    }
+
+    @GetMapping("/nominations/movies/{movieName}/{movieYear}")
+    @ResponseBody
+    public List<Nominated> nominationByMovieNameAndYear(@PathVariable int movieYear, @PathVariable String movieName) {
+      return filmRepository.findNominationByMovieNameAndYear(setSpaces(movieName), movieYear);
+    }
+
+    @GetMapping("/nominations/person/{name}")
+    @ResponseBody
+    public List<Nominated> nominationByPerson(@PathVariable String name) {
+      String nameArray[] = name.split("_");
+      String fname, lname;
+      if (nameArray.length > 2)
+      {
+        fname = nameArray[0] + " " + nameArray[1];
+        lname = nameArray[2];
+      }
+      else {
+        fname = nameArray[0];
+        lname = nameArray[1];
+      }
+      return filmRepository.findNominationByPersonFnameAndLname(fname, lname);
+    }
+
     //Different searches through the nomination repo
     @GetMapping("/nominations/search")
     @ResponseBody
@@ -274,8 +350,20 @@ public class MainController {
         } catch (NumberFormatException nfe) {
           return null;
         }
+      } else if(allParams.containsKey("award") && allParams.containsKey("award_year")) {
+        try {
+          return filmRepository.findNominationByAwardNameAndYear(setSpaces(allParams.get("award")), Integer.parseInt(allParams.get("award_year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
       } else if(allParams.containsKey("award")) {
         return filmRepository.findNominationByAwardName(setSpaces(allParams.get("award")));
+      } else if(allParams.containsKey("award_year")) {
+        try {
+          return filmRepository.findNominationByAwardYear(Integer.parseInt(allParams.get("award_year")));
+        } catch (NumberFormatException nfe) {
+          return null;
+        }
       } else if(allParams.containsKey("winner")) {
         return filmRepository.findNominationByWinning(Boolean.valueOf(allParams.get("winner")));
       } else if(allParams.containsKey("person_fname") && allParams.containsKey("person_lname")) {
@@ -326,6 +414,7 @@ public class MainController {
       }
     }
 
+    //Used to remove underscores and add spaces
     public String setSpaces(String s) {
       String sArray[] = s.split("_");
       s = "";

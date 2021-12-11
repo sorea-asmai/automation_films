@@ -27,6 +27,15 @@ public interface FilmRepository extends CrudRepository<Nominated, Integer> {
     @Query("SELECT n FROM Nominated n JOIN n.awardCategory a WHERE a.name = ?1")
     List<Nominated> findNominationByAwardName(String awardName);
 
+    @Query("SELECT n FROM Nominated n JOIN n.awardCategory a WHERE a.year = ?1")
+    List<Nominated> findNominationByAwardYear(int awardYear);
+
+    @Query("SELECT n FROM Nominated n JOIN n.awardCategory a WHERE a.name = ?1 AND a.year = ?2")
+    List<Nominated> findNominationByAwardNameAndYear(String awardName, int awardYear);
+
+    @Query("SELECT n FROM Nominated n JOIN n.awardCategory a WHERE a.name = ?1 AND a.year = ?2 AND n.is_winning = ?3")
+    List<Nominated> findNominationByAwardNameYearAndWinning(String awardName, int awardYear, Boolean winnig);
+
     @Query("SELECT n FROM Nominated n JOIN n.movie m WHERE m.name = ?1 AND m.year = ?2")
     List<Nominated> findNominationByMovieNameAndYear(String movieName, int movieYear);
 
