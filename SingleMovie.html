@@ -6,10 +6,8 @@
 	<link href="SingleMovie.css" rel="stylesheet" type="text/css" />
   <link href="NavigationBar.css" rel="stylesheet" type="text/css"/>
   <link href="PopularMoviesPage.css" rel="stylesheet" type="text/css" />
-</head>
 
-<!-- Background Size -->
-<style>
+  <style>
 	body {
     margin:0;
     padding:0;
@@ -18,6 +16,10 @@
 		background-size: cover;
 	}
 </style>
+</head>
+
+<!-- Background Size -->
+
 
 <!-- Navigation Bar -->
 <body>
@@ -67,18 +69,18 @@
 <body>
 	<title id= "title">Stranger Things</title>
     <p id= "singleMovie_cover">
-    <img alt='title' src='https://upload.wikimedia.org/wikipedia/en/6/63/Stranger_Things_S1V1.png' width="702" height="1040"> 
+    <img alt='title' src='https://m.media-amazon.com/images/M/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_.jpg' width="580" height="740"> 
   </p>
   
   <p>
-    <a class="imdb" href="https://www.imdb.com/title/tt4574334/?ref_=ttmi_tt"><img src= "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" width="250" height="300"></a>
+    <a class="imdb" href="https://www.imdb.com/title/tt4574334/?ref_=ttmi_tt"><img src= "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" width="150" height="200"></a>
   </p>
 
   <!-- Year, Awarded, Nominations, Descriptiion -->
-  <p id = "year">Year: 2016</p>
-  <p id = "awarded">Awarded: Best Singer</p>
-  <p id = "nominations">Nominations: Best Actor and Best Movie</p>
-  <p id = "descriptions">In a small town where everyone knows everyone, a peculiar incident starts a chain of events that leads to the disappearance of a child, which begins to tear at the fabric of an otherwise peaceful community. Dark government agencies and seemingly malevolent supernatural forces converge on the town, while a few of the locals begin to understand that there's more going on than meets the eye.—Charles J</p>
+  <p id = "year" style = "top: 180px;">Year: 2016</p>
+  <p id = "awarded" style = "top: 220px; color: #B91C1C">Awarded: Best Singer</p>
+  <p id = "nominations" style = "top: 260px; color: #B91C1C;" >Nominations: Best Actor, Best Movie</p>
+  <p id = "descriptions" style = "top: 315px;">In a small town where everyone knows everyone, a peculiar incident starts a chain of events that leads to the disappearance of a child, which begins to tear at the fabric of an otherwise peaceful community. Dark government agencies and seemingly malevolent supernatural forces converge on the town, while a few of the locals begin to understand that there's more going on than meets the eye. —Charles J</p>
 
 </body>
 
@@ -87,14 +89,15 @@
 <!--<hr style="height:1200px">-->
 <title id="recommend"hr>Recommendations</title>
 
-<div style = "top: 800px;">
-<div class="row" style="margin-top: 1300px;">
+<div style = "top: 0px;">
+<div class="row" style="margin-top: 905px;">
         <!-- Column of Movies -->
          <div class="column"">
             <!-- Movie (1,1) -->
             <img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg"width="250" height="370"/>
             <p id = "movieTitle">Dunkirk</p>
             <p id = "movieYear" class="movie-year">2017</p>
+        
          </div>
 
         <!-- Excess Code for Thymeleaf-- -->
@@ -121,6 +124,7 @@
             </a>
             <p id = "movieTitle">Stranger Things</p>
             <p id = "movieYear" class="movie-year">2021</p>
+          
          </div>
          <!-- Movie (1,5) -->
          <div class="column">

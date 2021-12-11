@@ -3,8 +3,8 @@
 position: absolute;
 width: 505px;
 height: 252px;
-left: 926px;
-top: 409px;
+right: 235px;
+top: 580px;
 }
 
 /* Recommend Movies */
@@ -12,8 +12,8 @@ top: 409px;
 position: absolute;
 width: 329px;
 height: 47px;
-left: 580px;
-top: 1300px;
+left: 450px;
+top: 900px;
 
 font-family: Roboto;
 font-style: normal;
@@ -41,8 +41,8 @@ margin: 0px 83px;
 position: absolute;
 width: 612px;
 height: 92px;
-left: 850px;
-top: 225px;
+left: 700px;
+top: 125px;
 
 font-family: Roboto;
 font-style: normal;
@@ -81,8 +81,8 @@ color: #000000;
 position: absolute;
 width: 558px;
 height: 296px;
-left: 816px;
-top: 933px;
+left: 700px;
+top: 400px;
 
 font-family: Roboto;
 font-style: normal;
@@ -102,7 +102,7 @@ position: absolute;
 width: 702px;
 height: 1040px;
 left: 57px;
-top: 211px;
+top: 100px;
 
 background: url(image.png);
 
@@ -113,8 +113,8 @@ background: url(image.png);
 position: absolute;
 width: 572px;
 height: 92px;
-left: 818px;
-top: 764px;
+left: 700px;
+top: 700px;
 
 font-family: Roboto;
 font-style: normal;
@@ -133,7 +133,7 @@ color: #000000;
 position: absolute;
 width: 447.69px;
 height: 92px;
-left: 818px;
+left: 700px;
 top: 718px;
 
 font-family: Roboto;
@@ -152,7 +152,7 @@ color: #000000;
 position: absolute;
 width: 447.69px;
 height: 92px;
-left: 818px;
+left: 700px;
 top: 672px;
 
 font-family: Roboto;
