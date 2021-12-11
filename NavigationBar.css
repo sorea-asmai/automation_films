@@ -90,12 +90,15 @@ top: 500px;
 .NavigationBar input[type=search]{
   float: c;
   text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
   padding: 5px;
   width: 50%;
   border: ridge;
-  border-color: white;
+  border-color: #B91C1C;
   background: #E5E5E5;
-  margin-top: 6px;
+  margin-top: 5px;
   font-size: 18px;
   color: black;
 }
