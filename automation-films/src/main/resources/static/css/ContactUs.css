@@ -1,0 +1,61 @@
+.column {
+  float: left;
+  width: 18%;
+  padding: 10px;
+}
+
+/* main > contant us*/
+#contact-us{
+position: absolute;
+width: 575px;
+height: 34px;
+left: 57px;
+top: 50px;
+
+font-family: 'Courier New';
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+
+color: #000000;
+}
+
+/*our-team*/
+#our-team{
+  position: absolute;
+  width: 363px;
+  height: 57px;
+  left: 300px;
+  top: 80px;
+
+  font-family: Monserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 57px;
+  display: flex;
+  text-align: center;
+  letter-spacing: 0,.2px;
+  color: black;
+}
+
+/* Team image */
+.image{
+  position: absolute;
+  left: 50px;
+  top: 200px;
+}
+
+/* Have a question? */
+.contact-form {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  right: 125px;
+  top: 200px;
+}
+
+
+
+

@@ -1,0 +1,52 @@
+/* Movie Year */
+#movieYear1 {
+position: static;
+width: 56px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 12px 0px;
+
+}
+
+/* Movie Title*/
+#movieTitle1 {
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+}
+
+
+

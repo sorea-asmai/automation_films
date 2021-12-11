@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Home Page</title>
+  
+	<!-- Imported CSS Files-->
+	<link th:href="@{css/NavigationBar.css}" type="text/css" rel="stylesheet" />
+  
+</head>
+
+
+<!-- Navigation Bar -->
+<body>
+	<div class="NavigationBar">
+
+		<!-- Home Icon -->
+		<a class="active" href="http://localhost:8080/"><img alt="Logo" th:src="@{css/logo.png}" width="30" height="30"></a>
+
+    <!-- Popular Movies Icon -->
+    <a class="active" href="http://localhost:8080/popular_movies"><big>Trending Oscar Films</a><big>
+
+    <!-- Contact Us Icon -->
+    <a class="active" href="http://localhost:8080/contact_us"><big>Contact Us</a><big>
+      
+	</div>
+</body>
+
+<!-- Main Title -->
+<body>
+<div class = "mainTitle">
+	<h1>Automation Films</h1>
+  </div>
+</body>
+
+<!-- Let's Get Started Button -->
+<body>
+    <div class="startPosition">
+    <h1 id = "startText">
+      <a href="http://localhost:8080/popular_movies" style = "color: black"> Let's Get Started</a>
+    </h1>
+    </div>
+</body>
+
+<!-- Home Background -->
+<style>
+	body {
+    margin:0;
+    padding:0;
+		background-image: url('https://cdn.pixabay.com/photo/2019/05/19/10/40/cinema-4213751_1280.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+</style>
+</html>

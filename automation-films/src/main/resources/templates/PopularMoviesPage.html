@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Popular Movie Page</title>
+	<link th:href="@{css/NavigationBar.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{css/PopularMoviesPage.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{css/Row.css}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<div class="topnav">
+		<a class="active" href="./index.html"><img alt="Logo" src="https://cdn.pixabay.com/photo/2015/12/09/22/24/filmklappe-1085692_1280.png" width="30" height="30"></a>
+         <a class="active" href="./ContactUs.html"><big>Contact Us</a><big>
+         <input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
+         <button type="submit"><i class=" fa fa-search"></i></button>
+      </div>
+      <a href="https://posterspy.com/wp-content/uploads/2020/11/NOMADLAND-HIGHRES-1500x1875.jpg/">
+      <img th:src ="@{css/popularmain.png}" />
+      </a>
+      <p id="nomandlandTitle"> Nomandland 
+      <p>
+      <p id="nomandlandTitle1"> Best Picture | Best Actress | Best Director</p>
+      <p id="text"> Main > Popular Movies 
+      <p>
+      <div class="dropdown">
+         <button class="dropbtn">Categories</button>
+         <div class="dropdown-content">
+            <div th:each="award : ${awards.iterator()}">
+               <a th:text="${award.getName()}" th:href="@{'#' + ${award.getName()}}">Best picture</a>
+            </div>
+         </div>
+      </div>
+      <div th:each="award : ${awards.iterator()}">
+         <a th:id = "${award.getName()}">
+            <p th:text="${award.getName()}" id = "category">Best Picture</p>
+            <p id = "seeMore"> See More</p>
+         </a>
+         <!-- Row 1 of Movies -->
+         <div class="row clearfix">
+            <div th:each="nomination, num : ${award.getNomination().iterator()}" th:if="${num.index}<5" class="column">
+               <!-- Movie (1,1) -->
+               <img alt="Alt text" th:src="${nomination.getMovie().getPoster()}"width="250" height="370">
+               <p th:text="${nomination.getMovie().getName()}"  id = "movieTitle1">Dunkirk</p>
+               <p th:text="${nomination.getMovie().getYear()}"  id = "movieYear1">2017</p>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
