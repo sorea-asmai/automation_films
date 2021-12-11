@@ -154,10 +154,15 @@ public class MainController {
      }
 
     @GetMapping(path="/popular_movies")
-    public String home(Model model) {
+    public String populaMovies(Model model) {
       Iterable<AwardCategory> awards = awardCategoryRepository.findAll();
       model.addAttribute("awards", awards); 
       return "jsPopularMovie.html";
+    }
+
+    @GetMapping(path="/contact_us")
+    public String contactUs() { 
+      return "ContactUs.html";
     }
 
 
