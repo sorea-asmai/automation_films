@@ -1,41 +1,48 @@
-/* Separated Line */
-#line {
+/* IMDB icon */
+.imdb{
 position: absolute;
-width: 1440px;
-height: 0px;
-left: 0px;
-top: 1361px;
-
-border: 1px solid rgba(0, 0, 0, 0.5);
-transform: rotate(0.08deg);
-
+width: 505px;
+height: 252px;
+right: 235px;
+top: 580px;
 }
 
-/* Breadcrumb */
-#breadcrumb {
+/* Recommend Movies */
+#recommend{
 position: absolute;
-width: 575px;
-height: 34px;
-left: 57px;
-top: 129px;
+width: 329px;
+height: 47px;
+left: 450px;
+top: 900px;
 
-font-family: DM Sans;
+font-family: Roboto;
 font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 23px;
+font-weight: bold;
+font-size: 36px;
+line-height: 75px;
+
+display: flex;
+align-items: center;
+text-align: center;
+/* identical to box height */
 
 color: #000000;
 
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 83px;
 }
 
 /* Movie Title */
-#singleMovie_title {
+#title {
 position: absolute;
 width: 612px;
 height: 92px;
-left: 777px;
-top: 225px;
+left: 700px;
+top: 125px;
 
 font-family: Roboto;
 font-style: normal;
@@ -48,7 +55,6 @@ text-align: center;
 
 color: #000000;
 }
-
 
 /* Available Streaming Platforms: */
 #streaming_title {
@@ -70,13 +76,13 @@ color: #000000;
 
 }
 
-/* Description */
-#description {
+/* Description of the Movie */
+#descriptions {
 position: absolute;
 width: 558px;
 height: 296px;
-left: 816px;
-top: 933px;
+left: 700px;
+top: 400px;
 
 font-family: Roboto;
 font-style: normal;
@@ -90,13 +96,13 @@ color: #000000;
 
 }
 
-/* Movie Cover */
+/* Main Movie Cover */
 #singleMovie_cover {
 position: absolute;
 width: 702px;
 height: 1040px;
 left: 57px;
-top: 211px;
+top: 100px;
 
 background: url(image.png);
 
@@ -107,8 +113,8 @@ background: url(image.png);
 position: absolute;
 width: 572px;
 height: 92px;
-left: 818px;
-top: 764px;
+left: 700px;
+top: 700px;
 
 font-family: Roboto;
 font-style: normal;
@@ -127,7 +133,7 @@ color: #000000;
 position: absolute;
 width: 447.69px;
 height: 92px;
-left: 818px;
+left: 700px;
 top: 718px;
 
 font-family: Roboto;
@@ -141,13 +147,12 @@ align-items: center;
 color: #000000;
 }
 
-
 /* Year: 2016 */
 #year {
 position: absolute;
 width: 447.69px;
 height: 92px;
-left: 818px;
+left: 700px;
 top: 672px;
 
 font-family: Roboto;
@@ -160,7 +165,6 @@ align-items: center;
 
 color: #000000;
 }
-
 
 /* Streaming Platform */
 #streaming_plat {
@@ -187,7 +191,7 @@ background: url(image.png);
   display: table;
 }
 
-/* Sub Movie Title */
+/* Recommend - Sub Movie Title */
 #subMovieTitle {
 position: static;
 width: 250px;
@@ -212,7 +216,7 @@ flex-grow: 0;
 margin: 12px 0px;
 }
 
-/* Year */
+/* Recommend - Sub Movie Year */
 #subMovieYear {
 position: static;
 width: 114px;
@@ -229,7 +233,6 @@ line-height: 16px;
 
 /* gray/400 */
 color: #9CA3AF;
-
 
 /* Inside Auto Layout */
 flex: none;

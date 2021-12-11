@@ -1,0 +1,272 @@
+/* Header Title - Nomandland */
+#headertitle{
+  position: absolute;
+  max-width: 99%;
+  max-height: 99%;
+  left: 31px;
+  top: 500px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  display: flex;
+  align-items: center;
+
+  color: #FFFCFC;
+}
+
+/* Subtitle - Best Picture | Best Actress | Best Director */
+#subtitle{
+position: absolute;
+width: 808px;
+height: 179px;
+left: 31px;
+top: 540px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+color: #FFFCFC;
+}
+
+/* Bread Crumb - Main > Popular Movies */
+.breadCrumb{
+position: absolute;
+width: 575px;
+height: 34px;
+left: -25px;
+top: 690 px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+padding: 0px, 18px;
+list-style: none;
+
+color: black;
+}
+
+/* Bread Crumb Formatting */
+.breadCrumb li {
+display: inline;
+font-size: 18px;
+}
+
+/* Bread Crumb On That Page */
+.breadCrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Bread Crumb Linked Pages - Changes Color */
+.breadCrumb li a {
+  color: #B91C1C;
+  text-decoration: none;
+}
+
+/* Bread Crumb Hover - Changes Color */
+.breadCrumb li a:hover {
+  color: rgb(122, 14, 14);
+  text-decoration:underline;
+}
+
+/* Search Bar Position */
+search_bar_position {
+position: absolute;
+width: 786px;
+height: 40px;
+left: 327px;
+top: 750px;
+}
+
+/* Search Bar Appearance */
+search_bar_appearance {
+position: absolute;
+left: 327px;
+right: 327px;
+top: 802px;
+bottom: 2887px;
+}
+
+/*** dropdown Search Bar, by features ****/
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  left: 44%;;
+  top: 20px;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block; align: center;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #B91C1C;
+  color: #ffffff;
+ }
+
+  
+/* Category */
+#category{
+
+position: relative;
+width: 700px;
+height: 0px;
+left: 21px;
+top: 0px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 47px;
+
+color: #B91C1C;
+;
+}
+
+#seeMore {
+  /* See more */
+
+position: static;
+width: 90px;
+height: 20px;
+top: 0px;
+left: 0px;
+bottom: 50px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 0px;
+/* identical to box height, or 133% */
+
+/* rose/700 */
+color: #BE123C;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 1325px;
+}
+
+/* Columns of Movies */
+.column {
+  float: left;
+  width: 16.5%;
+  padding: 23px;
+}
+
+/* Rows of Movies */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  height: -100px;
+}
+/* Fix movies list block */
+clearfix::after
+{
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* Movie Table */
+table {
+  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+/* Movie Year */
+#movieYear {
+position: static;
+width: 56px;
+height: 16px;
+left: 0px;
+top: 382px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+/* gray/400 */
+color: #9CA3AF;
+}
+
+/* Movie Year Adjustment */
+.movie-year{
+  margin: 20px 0 !important;
+  }
+
+/* Movie Title */
+#movieTitle {
+position: static;
+width: 250px;
+height: 23px;
+left: 0px;
+top: 410px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+/* gray/900 */
+color: #111827;
+}
