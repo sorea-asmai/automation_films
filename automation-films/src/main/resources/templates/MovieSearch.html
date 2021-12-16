@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Select a Category Page</title>
+
+	<!-- Imported CSS Files-->
+	<link th:href="@{/css/NavigationBar.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/PopularMoviesPage.css}" rel="stylesheet" type="text/css" />
+   <link th:href="@{/css/Row.css}" rel="stylesheet" type="text/css" />
+
+	<!-- Remove White Border on Page-->
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #FDFFFF;
+      }
+	</style>
+</head>
+
+
+<!-- Navigation Bar -->
+
+<body>
+	<div class="NavigationBar">
+		<!-- Logo Icon -->
+		<a class="active" href="http://localhost:8080/"><img alt="Logo" th:src="@{/css/logo.png}" width="30" height="30"></a>
+    
+     <!-- Popular Movies Icon -->
+     <a class="active" href="http://localhost:8080/popular_movies"><big>Trending Oscar Films</a><big>
+
+      <!-- Search Bar - Search Your Favorite Film? -->
+      <script>
+      function movie_search() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("a")[0];
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+               li[i].style.display = "";
+         } else {
+               li[i].style.display = "none";
+         }
+         }
+      }
+      </script>
+      <form action="http://localhost:8080/movies/search" method="GET">
+        <input style= "margin-top: 5px; margin-left: 150px;" type="search" placeholder="Search Your Favorite Film" name="name">
+        <button type="submit"><i class=" fa fa-search"></i></button>
+      </form>
+      <!-- Contact Us Icon -->
+      <a style = "margin-top: -42.5px;" class="active" href="http://localhost:8080/contact_us"><big>Contact Us</a><big>
+  </div>
+
+  <!--Breadcrumb -->
+  <ul class ="breadCrumb"> 
+    <li><a href="http://localhost:8080/">Home</a></li>
+    <li><a href="http://localhost:8080/popular_movies">Trending Oscar Films</a></li>
+    <li>Movie Search</li>
+ </ul>
+
+ <script th:inline="javascript">
+    var movieName = /*[[${movie}]]*/ 'name';
+
+   fetch('http://localhost:8080/api/movies/searchBar/search?name=' + movieName)
+       .then(function (response) {
+           return response.json();
+       })
+       .then(function (data) {
+           appendMovie(data);
+       })
+       .catch(function (err) {
+           console.log('error: ' + err);
+       });
+   function appendMovie(data) {
+       var mainContainer = document.getElementById("movieResult");
+       let tab = 
+           `<div class="row clearfix">`;
+
+       for (var i = 0; i < data.length; i++) {
+           tab +=
+                `<div style= "margin-top: 110px; margin-left: 55px;" class="column">
+                    <a href="http://localhost:8080/popular_movies/single_movie/${data[i].name}/${data[i].year}">
+                        <img alt="Alt text" src="${data[i].poster}" width="250" height="370">
+                    </a>
+                    <p id = "movieTitle1">${data[i].name}</p>
+                    <p id = "movieYear1">${data[i].year}</p>
+                </div>`;
+       }
+       tab +=
+             `</div>`;
+       mainContainer.innerHTML = tab;
+   }
+   </script>
+<title id="result"hr>Results</title>
+<div id="movieResult"></div>
+</body>

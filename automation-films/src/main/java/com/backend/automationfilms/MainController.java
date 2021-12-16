@@ -38,7 +38,7 @@ public class MainController {
     private PersonRepository personRepository;
 
     @PostMapping(
-      value = "/createNomination", consumes = "application/json", produces = "application/json")
+      value = "/api/createNomination", consumes = "application/json", produces = "application/json")
     public @ResponseBody Nominated createNominated(@RequestBody JsonNode nomination, Model model) {
       //Getting movie and movie title from the posted json
       JsonNode movieObject = nomination.get("movie");
@@ -137,27 +137,43 @@ public class MainController {
       return nominated;
     }
 
-    //Example
-    @GetMapping(path="/movie/{movieName}/{movieYear}")
-    public String movie(@PathVariable String movieName, @PathVariable int movieYear, Model model) {
-      Movie movie = movieRepository.findMovieByNameAndYear(setSpaces(movieName), movieYear).iterator().next();
-      model.addAttribute("movie", movie);
-      return "movie.html";
-    }
-
-     //Example
-     @GetMapping(path="/example")
-     public String popularMovies(Model model) {
-       Iterable<AwardCategory> awards = awardCategoryRepository.findAll();
-       model.addAttribute("awards", awards); 
-       return "PopularMoviesPage.html";
-     }
-
     @GetMapping(path="/popular_movies")
     public String populaMovies(Model model) {
       Iterable<AwardCategory> awards = awardCategoryRepository.findAll();
+      Movie cover = movieRepository.findById(14).get();
       model.addAttribute("awards", awards); 
+      model.addAttribute("cover", cover);
       return "jsPopularMovie.html";
+    }
+
+    @GetMapping(path="/popular_movies/see_more/{awardName}")
+    public String seeMore(@PathVariable String awardName, Model model) {
+      List<AwardCategory> award = awardCategoryRepository.findAwardCategoryByName(awardName);
+      model.addAttribute("awards", award); 
+      return "SeeMore.html";
+    }
+
+    @GetMapping(path="/popular_movies/single_movie/{movieName}/{movieYear}")
+    public String singleMovie(@PathVariable String movieName, @PathVariable String movieYear, Model model) {
+      try {
+        List<Movie> movie = (List<Movie>)movieRepository.findMovieByNameAndYear(movieName, Integer.parseInt(movieYear));
+        model.addAttribute("movie", movie); 
+        return "SingleMovie.html";
+      } catch (NumberFormatException nfe) {
+        return null;
+      }
+    }
+
+    @GetMapping(path="/movies/search")
+    public String searchBar(@RequestParam Map<String,String> allParams, Model model) {
+      if(allParams.containsKey("name")) {
+        String movie = allParams.get("name");
+        model.addAttribute("movie", movie);
+        return "MovieSearch.html";
+      }
+      else {
+        return null;
+      }
     }
 
     @GetMapping(path="/contact_us")
@@ -165,20 +181,19 @@ public class MainController {
       return "ContactUs.html";
     }
 
-
-    @GetMapping("/awards")
+    @GetMapping("/api/awards")
     @ResponseBody
     public List<AwardCategory> allAwards() {
       return (List<AwardCategory>)awardCategoryRepository.findAll();
     }
 
-    @GetMapping("/awards/{id}")
+    @GetMapping("/api/awards/{id}")
     @ResponseBody
     public AwardCategory awardById(@PathVariable int id) {
       return awardCategoryRepository.findById(id).get();
     }
 
-    @GetMapping("/awards/search")
+    @GetMapping("/api/awards/search")
     @ResponseBody
     public List<AwardCategory> searchAward(@RequestParam Map<String,String> allParams) {
       if(allParams.containsKey("id")) {
@@ -207,21 +222,21 @@ public class MainController {
     }
 
     //Gets all movies in repo
-    @GetMapping("/movies")
+    @GetMapping("/api/movies")
     @ResponseBody
     public List<Movie> allMovies() {
       return (List<Movie>)movieRepository.findAll();
     }
 
     //Gets movie by the inputed id
-    @GetMapping("/movies/{id}")
+    @GetMapping("/api/movies/{id}")
     @ResponseBody
     public Movie movieById(@PathVariable int id) {
       return movieRepository.findById(id).get();
     }
 
     //Different searches through the movie repo
-    @GetMapping("/movies/search")
+    @GetMapping("/api/movies/search")
     @ResponseBody
     public List<Movie> searchMovie(@RequestParam Map<String,String> allParams) {
       if(allParams.containsKey("id")) {
@@ -251,70 +266,81 @@ public class MainController {
       }
     }
 
+    @GetMapping("/api/movies/searchBar/search")
+    @ResponseBody
+    public List<Movie> searchBarMovie(@RequestParam Map<String,String> allParams) {
+      if(allParams.containsKey("name")) {
+        return movieRepository.findMovieByApproxName(setSpaces(allParams.get("name")));
+      }
+      else {
+        return null;
+      }
+    }
+
     //Gets movies by genre id
-    @GetMapping("/genre/{id}")
+    @GetMapping("/api/genre/{id}")
     @ResponseBody 
     public Genre moviesByGenreId(@PathVariable int id) {
       return genreRepository.findById(id).get();
     }
 
     //Gets all nominations in repo
-    @GetMapping("/nominations")
+    @GetMapping("/api/nominations")
     @ResponseBody
     public List<Nominated> allNominations() {
       return (List<Nominated>)filmRepository.findAll();
     }
 
     //Gets nomination by inputed id
-    @GetMapping("/nominations/{id}")
+    @GetMapping("/api/nominations/{id}")
     @ResponseBody
     public Nominated nominationById(@PathVariable int id) {
       return filmRepository.findById(id).get();
     }
 
-    @GetMapping("/nominations/category/{award}")
+    @GetMapping("/api/nominations/category/{award}")
     @ResponseBody
     public List<Nominated> nominationByAwardName(@PathVariable String award) {
       return filmRepository.findNominationByAwardName(setSpaces(award));
     }
 
-    @GetMapping("/nominations/category/year/{year}")
+    @GetMapping("/api/nominations/category/year/{year}")
     @ResponseBody
     public List<Nominated> nominationByAwardYear(@PathVariable int year) {
       return filmRepository.findNominationByAwardYear(year);
     }
 
-    @GetMapping("/nominations/category/{award}/{year}")
+    @GetMapping("/api/nominations/category/{award}/{year}")
     @ResponseBody
     public List<Nominated> nominationByAwardNameAndYear(@PathVariable int year, @PathVariable String award) {
       return filmRepository.findNominationByAwardNameAndYear(setSpaces(award), year);
     }
 
-    @GetMapping("/nominations/category/{award}/{year}/winner/{winning}")
+    @GetMapping("/api/nominations/category/{award}/{year}/winner/{winning}")
     @ResponseBody
     public List<Nominated> nominationByAwardNameYearAndWinning(@PathVariable int year, @PathVariable String award, @PathVariable Boolean winning) {
       return filmRepository.findNominationByAwardNameYearAndWinning(setSpaces(award), year, winning);
     }
 
-    @GetMapping("/nominations/movies/{movieName}")
+    @GetMapping("/api/nominations/movies/{movieName}")
     @ResponseBody
     public List<Nominated> nominationByMovieName(@PathVariable String movieName) {
       return filmRepository.findNominationByMovieName(setSpaces(movieName));
     }
 
-    @GetMapping("/nominations/movies/year/{movieYear}")
+    @GetMapping("/api/nominations/movies/year/{movieYear}")
     @ResponseBody
     public List<Nominated> nominationByMovieYear(@PathVariable int movieYear) {
       return filmRepository.findNominationByMovieYear(movieYear);
     }
 
-    @GetMapping("/nominations/movies/{movieName}/{movieYear}")
+    @GetMapping("/api/nominations/movies/{movieName}/{movieYear}")
     @ResponseBody
     public List<Nominated> nominationByMovieNameAndYear(@PathVariable int movieYear, @PathVariable String movieName) {
       return filmRepository.findNominationByMovieNameAndYear(setSpaces(movieName), movieYear);
     }
 
-    @GetMapping("/nominations/person/{name}")
+    @GetMapping("/api/nominations/person/{name}")
     @ResponseBody
     public List<Nominated> nominationByPerson(@PathVariable String name) {
       String nameArray[] = name.split("_");
@@ -332,7 +358,7 @@ public class MainController {
     }
 
     //Different searches through the nomination repo
-    @GetMapping("/nominations/search")
+    @GetMapping("/api/nominations/search")
     @ResponseBody
     public List<Nominated> searchNominations(@RequestParam Map<String,String> allParams) {
       if(allParams.containsKey("id")) {
@@ -383,21 +409,21 @@ public class MainController {
     }
 
     //Gets all people in repo
-    @GetMapping("/persons")
+    @GetMapping("/api/persons")
     @ResponseBody
     public List<Person> allPersons() {
       return (List<Person>)personRepository.findAll();
     }
 
     //Gets person by id
-    @GetMapping("/persons/{id}")
+    @GetMapping("/api/persons/{id}")
     @ResponseBody
     public Person personById(@PathVariable int id) {
       return personRepository.findById(id).get();
     }
 
     //Different searchs through the person repo
-    @GetMapping("/persons/search")
+    @GetMapping("/api/persons/search")
     @ResponseBody
     public List<Person> searchPersons(@RequestParam Map<String,String> allParams) {
       if(allParams.containsKey("id")) {
@@ -430,17 +456,4 @@ public class MainController {
       
       return s;
     }
-
-    // Example for search and drop down menu
-    // Don't worry about this
-    /*@PostMapping(value="/search")
-    public SomeEnityData postMethodName(@RequestBody SomeEnityData entity) {
-        //TODO: process POST request
-        searchinput = searchinput
-        searchcategory = searchcatory
-
-        /movies?searchcategory=searchinput;
-        
-        return entity;
-    }*/
 }

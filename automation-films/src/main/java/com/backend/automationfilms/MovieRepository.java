@@ -22,6 +22,9 @@ public interface MovieRepository extends CrudRepository<Movie, Integer> {
     @Query("SELECT m FROM Movie m WHERE m.name = ?1")
     List<Movie> findMovieByName(String name);
 
+    @Query("SELECT m FROM Movie m WHERE m.name LIKE %?1%")
+    List<Movie> findMovieByApproxName(String name);
+
     @Query("SELECT m FROM Movie m WHERE m.year = ?1")
     List<Movie> findMovieByYear(int year);
 

@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Popular Movie Page</title>
 
-	<link th:href="@{css/NavigationBar.css}" rel="stylesheet" type="text/css" />
-	<link th:href="@{css/PopularMoviesPage.css}" rel="stylesheet" type="text/css" />
-	<link th:href="@{css/Row.css}" rel="stylesheet" type="text/css"/>
+	<link th:href="@{/css/NavigationBar.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/PopularMoviesPage.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/Row.css}" rel="stylesheet" type="text/css"/>
 
     <!-- Remove White Border on Page-->
 	<style type "text/css">
@@ -24,7 +24,7 @@
 <body>
 	<div class="NavigationBar">
 	    <!-- Logo Icon -->
-		<a class="active" href="http://localhost:8080/"><img alt="Logo" th:src="@{css/logo.png}" width="30" height="30"></a>
+		<a class="active" href="http://localhost:8080/"><img alt="Logo" th:src="@{/css/logo.png}" width="30" height="30"></a>
     
         <!-- Popular Movies Icon -->
         <a class="active" href="http://localhost:8080/popular_movies"><big>Trending Oscar Films</a><big>
@@ -48,19 +48,18 @@
             }
             }
         </script>
-        <input style= "margin-top: -5px;" type="search" id="myInput" onkeyup="movie_search()" placeholder="Search for a Movie" title="Type in a name">
-        <!--<input type="search" placeholder="Search Your Favorite Film?" name="What to watch">
-        //<button type="submit">
-        //<i class=" fa fa-search"></i></button> -->
-
-        <!-- Contact Us Icon -->
-        <a class="active" href="http://localhost:8080/contact_us"><big>Contact Us</a><big>
+        <form action="http://localhost:8080/movies/search" method="GET">
+            <input style= "margin-top: 5px; margin-left: 150px;" type="search" placeholder="Search Your Favorite Film" name="name">
+            <button type="submit"><i class=" fa fa-search"></i></button>
+          </form>
+          <!-- Contact Us Icon -->
+          <a style = "margin-top: -42.5px;" class="active" href="http://localhost:8080/contact_us"><big>Contact Us</a><big>
     </div>
 
 
     <!-- Header Background - Nomandland -->
-    <a href="./SingleMovie.html">
-        <img alt="Nomandland Poster Cover" th:src="@{css/popularmain.png}" height="660" width="1440">
+    <a th:href= "@{'http://localhost:8080/popular_movies/single_movie/'+${cover.getName()}+'/'+${cover.getYear()}}">
+        <img alt="Nomandland Poster Cover" th:src="@{/css/popularmain.png}" height="660" width="1440">
     </a>
       <!-- Title - Nomandland -->
     <p id="headertitle"> Nomandland </p>
@@ -75,7 +74,7 @@
           
     <div id="awardsDropDown"></div>
     <script>
-        fetch('http://localhost:8080/awards')
+        fetch('http://localhost:8080/api/awards')
             .then(function (response) {
                 return response.json();
             })
@@ -94,7 +93,7 @@
                             <div class="scrollable">
                             `;
 
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < 23; i++) {
                 tab +=
                     `<a href="${'#' + data[i].name}">${data[i].name}</a>`;
             }
@@ -104,20 +103,19 @@
             mainContainer.innerHTML = tab;
         }
     </script>
-     <div th:each="award : ${awards.iterator()}">
+     <div th:each="award, num : ${awards.iterator()}" th:if="${num.index}<23">
         <a th:id = "${award.getName()}">
            <p th:text="${award.getName()}" id = "category">Best Picture</p>
             <!-- Generate Data to See More Page -->
-            <h2 id = "seeMore"> <a href="./SeeMore.html" style =
-            "color: #B91C1C;">See More</h2></a>
+            <h2 id = "seeMore"> <a th:href="@{'http://localhost:8080/popular_movies/see_more/'+${award.getName()}}" style ="color: #B91C1C;">See More</h2></a>
         </a>
         <!-- Row 1 of Movies -->
         <div class="row clearfix">
            <div th:each="nomination, num : ${award.getNomination().iterator()}" th:if="${num.index}<5" class="column">
               <!-- Movie (1,1) -->
-              <a href="./SingleMovie.html">
-              <img alt="Alt text" th:src="${nomination.getMovie().getPoster()}" width="250" height="370">
-                </a>
+              <a th:href= "@{'http://localhost:8080/popular_movies/single_movie/'+${nomination.getMovie().getName()}+'/'+${nomination.getMovie().getYear()}}">
+                <img alt="Alt text" th:src="${nomination.getMovie().getPoster()}" width="250" height="370">
+              </a>
               <p th:text="${nomination.getMovie().getName()}"  id = "movieTitle1">Dunkirk</p>
               <p th:text="${nomination.getMovie().getYear()}"  id = "movieYear1">2017</p>
            </div>

@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>replit</title>
-	<link th:href="@{css/ContactUs.css}" type="text/css" rel="stylesheet" />
-	<link th:href="@{css/NavigationBar.css}" rel="stylesheet" type="text/css" />
-  <link th:href="@{css/PopularMoviesPage.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/ContactUs.css}" type="text/css" rel="stylesheet" />
+	<link th:href="@{/css/NavigationBar.css}" rel="stylesheet" type="text/css" />
+  <link th:href="@{/css/PopularMoviesPage.css}" rel="stylesheet" type="text/css" />
 </head>
 
 <!-- Background Size -->
@@ -27,7 +27,7 @@
 	<div class="NavigationBar">
 
 		<!-- Home Icon -->
-		<a class="active" href="http://localhost:8080/"><img alt="Logo" src="logo.png" width="30" height="30"></a>
+		<a class="active" href="http://localhost:8080/"><img alt="Logo" th:src="@{/css/logo.png}" width="30" height="30"></a>
 
     <!-- Popular Movies Icon -->
     <a class="active" href="http://localhost:8080/popular_movies"><big>Trending Oscar Films</a><big>

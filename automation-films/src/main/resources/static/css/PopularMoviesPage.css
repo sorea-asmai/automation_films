@@ -109,6 +109,27 @@ bottom: 2887px;
   border: none;
 }
 
+#result {
+  position: relative;
+  width: 329px;
+  height: 30px;
+  left: 650px;
+  top: 80px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 75px;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* identical to box height */
+  
+  color: #000000;
+}
+
 /* Dropdown Button */
 .dropbtn {
   background-color: black;

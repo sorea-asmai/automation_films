@@ -1,17 +1,20 @@
 /* IMDB icon */
 .imdb{
 position: absolute;
-width: 505px;
-height: 252px;
-right: 235px;
-top: 580px;
+width: 200px;
+height: 100px;
+right: 500px;
+top: 700px;
+background: #f0f0f0 url("https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg");
+background-size: 100%;
+z-index: 1000;
 }
 
 /* Recommend Movies */
 #recommend{
 position: absolute;
 width: 329px;
-height: 47px;
+height: 55px;
 left: 450px;
 top: 900px;
 
@@ -80,7 +83,7 @@ color: #000000;
 #descriptions {
 position: absolute;
 width: 558px;
-height: 296px;
+height: 450px;
 left: 700px;
 top: 400px;
 
@@ -112,7 +115,7 @@ background: url(image.png);
 #nominations {
 position: absolute;
 width: 572px;
-height: 92px;
+height: 300px;
 left: 700px;
 top: 700px;
 
@@ -132,7 +135,7 @@ color: #000000;
 #awarded {
 position: absolute;
 width: 447.69px;
-height: 92px;
+height: 200px;
 left: 700px;
 top: 718px;
 
@@ -151,7 +154,7 @@ color: #000000;
 #year {
 position: absolute;
 width: 447.69px;
-height: 92px;
+height: 150px;
 left: 700px;
 top: 672px;
 

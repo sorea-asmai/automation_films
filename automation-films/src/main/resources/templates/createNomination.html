@@ -1,6 +1,0 @@
-
-<div th:each="award : ${name.iterator()}">
-    <tr th:each="nomination : ${award.getNomination().iterator()}">
-        <img th:src="${nomination.getMovie().getPoster()}"></div>
-    </tr>
-</div>
